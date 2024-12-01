@@ -20,6 +20,7 @@ html,
   }
   font-size: 10px;
   user-select: none;
+  letter-spacing:-1px;
 }
 
 body {
