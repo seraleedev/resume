@@ -4,7 +4,7 @@ import { ResetCss } from "@/styles/reset";
 import { GlobalStyle } from "@/styles/global";
 import { useMediaQuery } from "react-responsive";
 import { H1 } from "./components/common/typhography";
-import Layout from "./components/system/pages/MainLayout";
+import Layout from "./components/system/templates/MainLayout";
 
 function App() {
   //mediaQuery

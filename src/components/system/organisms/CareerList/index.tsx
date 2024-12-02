@@ -3,7 +3,7 @@ import { CompanyInfo, ServiceWithRole } from "../../atoms/CareerItem";
 import { ICareerData } from "@/data/static";
 import Tag from "../../atoms/Tag";
 import { CareerItemWrap } from "./styles";
-import ProjectItem from "../../organisms/ProjectItems";
+import ProjectItem from "../../molcules/ProjectItems";
 
 /**
  * 경력 기술 리스트 컴포넌트

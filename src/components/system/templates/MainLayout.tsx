@@ -1,9 +1,13 @@
 import { careerData } from "@/data/static";
 import TitleWithDot from "../atoms/TitieWithDot";
 import Header from "../organisms/Header";
-import CareerList from "../templates/CareerList";
+import CareerList from "../organisms/CareerList";
 import { Container, ListWrap } from "./styles";
 
+/**
+ * 메인 페이지
+ * @returns
+ */
 const MainLayout = () => {
   return (
     <>

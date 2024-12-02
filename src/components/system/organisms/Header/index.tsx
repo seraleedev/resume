@@ -1,5 +1,5 @@
 import { theme } from "@/styles/theme";
-import { Container } from "../../pages/styles";
+import { Container } from "../../templates/styles";
 import { Button, FlexBox } from "@/components/common/component";
 import { H1, H4 } from "@/components/common/typhography";
 import { HeaderComponent, WrapperH1 } from "./styles";
