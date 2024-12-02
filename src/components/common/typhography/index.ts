@@ -6,6 +6,8 @@ interface ITextStyleProps {
   margin?: string;
   padding?: string;
   fontWeight?: number;
+  whiteSpace?: string;
+  maxWidth?: string;
 }
 
 const textStyle = css<ITextStyleProps>`
@@ -13,6 +15,8 @@ const textStyle = css<ITextStyleProps>`
   margin: ${({ margin }) => margin || 0};
   padding: ${({ padding }) => padding || 0};
   font-weight: ${({ fontWeight }) => fontWeight || 400};
+  white-space: ${({ whiteSpace }) => whiteSpace || "normal"};
+  max-width: ${({ maxWidth }) => maxWidth || "none"};
 `;
 
 export const H1 = styled.h1<ITextStyleProps>`

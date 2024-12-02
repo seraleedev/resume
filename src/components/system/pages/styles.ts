@@ -10,3 +10,7 @@ export const Container = styled.div<IContainerProps>`
   margin: 0 auto;
   ${({ padding }) => `padding:${padding};`}
 `;
+
+export const ListWrap = styled.div`
+  margin: 28px 0 0;
+`;

@@ -19,7 +19,6 @@ html,
     display: none;
   }
   font-size: 10px;
-  user-select: none;
   letter-spacing:-1px;
 }
 
@@ -28,5 +27,9 @@ body {
   padding: 0;
   color: #333333;
   overscroll-behavior-y: none;
+  ::selection{
+    color: #ffffff;
+    background-color: #62DE49;
+  }
 }
 `;
