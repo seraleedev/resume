@@ -160,42 +160,28 @@ export const careerData: ICareerData[] = [
 export const directionData = [
   {
     keyword: "Description",
-    description: `주석을 통해 이 함수가 어떤 역할을 하는 함수인지, 
-어디에 사용되는 데이터인지 설명합니다. 
-남들이 알아보기 쉬운 코드를 작성하려 합니다.`,
+    description: `주석을 통해 이 함수가 어떤 역할을 하는 함수인지,\n어디에 사용되는 데이터인지 설명합니다.\n남들이 알아보기 쉬운 코드를 작성하려 합니다.`,
   },
   {
     keyword: "Stability",
-    description: `테스트 시 오류가 없는 결과물을 내려 합니다. 
-1개라도 버그의 개수를 줄이기 위해 
-스스로 여러 번의 테스트를 실행합니다.`,
+    description: `테스트 시 오류가 없는 결과물을 내려 합니다.\n1개라도 버그의 개수를 줄이기 위해\n스스로 여러 번의 테스트를 실행합니다.`,
   },
   {
     keyword: "Unity",
-    description: `컴포넌트 생성 시, 디자인 가이드 수칙을 따르는 것을 중요시합니다.
- 프로젝트 때마다 달라지는 컴포넌트가 아닌, 
-전체적인 틀 안에서 변할 수 있는 컴포넌트를 추구합니다.`,
+    description: `컴포넌트 생성 시, 디자인 가이드 수칙을 따르는 것을 중요시합니다.\n프로젝트 때마다 달라지는 컴포넌트가 아닌,\n전체적인 틀 안에서 변할 수 있는 컴포넌트를 추구합니다.`,
   },
   {
     keyword: "Improvement",
-    description: `서비스에서 개선점을 찾아 발전시키는 작업에서 보람을 느낍니다. 
-하나의 프로젝트를 장기적으로 유지하는 것을 전제로 
-작업에 임하고 있습니다.`,
+    description: `서비스에서 개선점을 찾아 발전시키는 작업에서 보람을 느낍니다.\n하나의 프로젝트를 장기적으로 유지하는 것을 전제로\n작업에 임하고 있습니다.`,
   },
   {
     keyword: "Communication",
-    description: `여러 직군의 팀원들과 소통하고 합의점을 찾을 수 있습니다. 
-타인의 시선에 맞추어 설명하려고 하며
-다른 사람의 경험을 존중하는 것을 중요히 여깁니다.`,
+    description: `여러 직군의 팀원들과 소통하고 합의점을 찾을 수 있습니다.\n타인의 시선에 맞추어 설명하려고 하며\n다른 사람의 경험을 존중하는 것을 중요히 여깁니다.`,
   },
 ];
 
 export const contactData = [
-  {
-    platform: "mail",
-    link: "seraLeeDev@gmail.com",
-  },
-  { platform: "Github", link: "" },
+  { platform: "Github", link: "https://naver.com" },
   { platform: "Wanted", link: "" },
   { platform: "Remember", link: "" },
   { platform: "Velog", link: "" },

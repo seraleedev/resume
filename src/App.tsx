@@ -3,8 +3,7 @@ import { theme } from "@/styles/theme";
 import { ResetCss } from "@/styles/reset";
 import { GlobalStyle } from "@/styles/global";
 import { useMediaQuery } from "react-responsive";
-import { H1 } from "./components/common/typhography";
-import Layout from "./components/system/templates/MainLayout";
+import MainLayout from "./components/system/templates/MainLayout";
 
 function App() {
   //mediaQuery
@@ -14,7 +13,7 @@ function App() {
     <ThemeProvider theme={theme}>
       <ResetCss />
       <GlobalStyle />
-      <Layout />
+      <MainLayout isMobile={isMobile} />
     </ThemeProvider>
   );
 }

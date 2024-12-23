@@ -1,8 +1,9 @@
 import { theme } from "@/styles/theme";
+import { CSSProperties } from "react";
 import styled from "styled-components";
+import { StyleProps } from "@/type";
 
-// 공통 컴포넌트
-interface IFlexBoxProps {
+interface IFlexBoxProps extends StyleProps<CSSProperties> {
   width?: string;
   height?: string;
   overflow?: string;
@@ -17,23 +18,38 @@ interface IFlexBoxProps {
   gap?: string;
 }
 
+// 공통 컴포넌트
+interface IContainerProps {
+  width?: string;
+  height?: string;
+  padding?: string;
+}
+
+export const Container = styled.div<IContainerProps>`
+  width: ${({ width }) => width || "1000px"};
+  height: ${({ height }) => height || "auto"};
+  margin: 0 auto;
+  padding: ${({ padding }) => padding || 0};
+`;
+
 export const FlexBox = styled.div<IFlexBoxProps>`
   display: flex;
   ${({ width }) => width && `width: ${width};`}
   ${({ height }) => height && `width: ${height};`}
   ${({ overflow }) => overflow && `overflow: ${overflow};`}
   ${({ position }) => position && `position: ${position};`}
-  ${({ flexDirection }) => flexDirection && `flex-direction: ${flexDirection};`}
+  ${({ $flexDirection }) =>
+    $flexDirection && `flex-direction: ${$flexDirection};`}
   ${({ flex }) => flex && `flex: ${flex};`}
   ${({ flexWrap }) => flexWrap && `flex-wrap: ${flexWrap};`}
-  align-items: ${({ alignItems }) => alignItems || "center"};
+  align-items: ${({ $alignItems }) => $alignItems || "center"};
   justify-content: ${({ justify }) => justify || "center"};
   ${({ gap }) => gap && `gap: ${gap};`}
   ${({ margin }) => margin && `margin: ${margin};`}
   ${({ padding }) => padding && `padding: ${padding};`}
 `;
 
-interface IButtonProps {
+interface IButtonProps extends StyleProps<CSSProperties> {
   width?: string;
   height?: string;
   borderRadius?: string;
@@ -44,7 +60,7 @@ interface IButtonProps {
 export const Button = styled.button<IButtonProps>`
   width: ${({ width }) => width || "auto"};
   height: ${({ height }) => height || "auto"};
-  border-radius: ${({ borderRadius }) => borderRadius || "5px"};
+  border-radius: ${({ $borderRadius }) => $borderRadius || "5px"};
   background: ${({ background }) => background || theme.colors.white};
   display: flex;
   justify-content: center;

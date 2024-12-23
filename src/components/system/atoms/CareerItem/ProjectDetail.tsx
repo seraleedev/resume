@@ -14,10 +14,10 @@ interface IProjectDetail {
 const ProjectDetail = ({ details }: IProjectDetail) => {
   return (
     <FlexBox
-      flexDirection="column"
+      $flexDirection="column"
       gap="4px"
       justify="flex-start"
-      alignItems="flex-start"
+      $alignItems="flex-start"
       margin="0 0 0 10px"
     >
       {details.map((text, index) => (

@@ -24,7 +24,11 @@ const ServiceWithRole = ({
         {role}
       </Paragraph>
       {description && (
-        <Paragraph margin="15px 0 30px" maxWidth="760px" whiteSpace="pre-line">
+        <Paragraph
+          margin="15px 0 30px"
+          $maxWidth="760px"
+          $whiteSpace="pre-line"
+        >
           {description}
         </Paragraph>
       )}
