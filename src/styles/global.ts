@@ -35,7 +35,7 @@ html,
 *,
 *:before,
 *:after {
-  font-family: "SUIT-Regular", sans-serif;
+  font-family: "SUIT", sans-serif;
   box-sizing: border-box;
   ::-webkit-scrollbar {
     display: none;
