@@ -43,7 +43,7 @@ export const careerData: ICareerData[] = [
         title: "빼기 파트너즈 앱 개발",
         detail: [
           "파트너즈 앱 리뉴얼 디자인 구현",
-          "앱내 신규 서비스 개발",
+          "앱 내 신규 서비스 개발",
           "앱 서비스 유지보수",
         ],
       },
@@ -51,7 +51,7 @@ export const careerData: ICareerData[] = [
         title: "빼기 클라이언트 앱 개발",
         detail: [
           "클라이언트 앱 리뉴얼 디자인 구현",
-          "앱내 신규 서비스 개발",
+          "앱 내 신규 서비스 개발",
           "앱 서비스 유지보수",
         ],
       },
@@ -71,7 +71,7 @@ export const careerData: ICareerData[] = [
     history: "2022.05-2022.06",
     service: "출차요청 서비스 플리지",
     role: "인턴",
-    description: `앱내 채팅기능으로 간편히 출차를 요청하는 서비스 ‘플리지’의 홈페이지 화면 개발을 담당했습니다.`,
+    description: `앱 내 채팅기능으로 간편히 출차를 요청하는 서비스 ‘플리지’의 홈페이지 화면 개발을 담당했습니다.`,
     techs: ["Next.js", "Typescript", "Antd"],
     projectList: [
       {
