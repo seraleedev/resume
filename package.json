@@ -30,7 +30,9 @@
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -53,7 +55,9 @@
   "devDependencies": {
     "@types/react-responsive": "^8.0.8",
     "customize-cra": "^1.0.0",
+    "gh-pages": "^6.2.0",
     "react-app-alias": "^2.2.2",
     "react-app-rewire-alias": "^1.1.7"
-  }
+  },
+  "homepage": "https://seraleedev.github.io/resume-react/"
 }
