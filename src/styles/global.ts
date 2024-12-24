@@ -29,7 +29,7 @@ body {
   overscroll-behavior-y: none;
   ::selection{
     color: #ffffff;
-    background-color: #62DE49;
+    background-color: #158000;
   }
 }
 `;

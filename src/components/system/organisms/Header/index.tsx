@@ -19,9 +19,17 @@ interface IHeader extends IMainLayout {
 }
 
 const Header = ({ isScroll, isMobile }: IHeader) => {
+  //스크롤 버튼 클릭
   const onClickScroll = () => {
     const pageHeight = window.innerHeight;
     window.scrollTo({ top: pageHeight, behavior: "smooth" });
+  };
+
+  //인쇄 버튼 클릭
+  const onClickPrint = () => {
+    window.open(
+      "https://drive.google.com/file/d/1wgNC_udivaIEZZZ0taV3kCtAaT0oUk_l/view?usp=drive_link"
+    );
   };
 
   return isMobile ? (
@@ -61,6 +69,7 @@ const Header = ({ isScroll, isMobile }: IHeader) => {
             $borderRadius="100%"
             width="40px"
             height="40px"
+            onClick={onClickPrint}
           >
             <BsDownload size={"2rem"} />
           </Button>

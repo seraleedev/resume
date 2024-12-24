@@ -181,8 +181,6 @@ export const directionData = [
 ];
 
 export const contactData = [
-  { platform: "Github", link: "https://naver.com" },
-  { platform: "Wanted", link: "" },
-  { platform: "Remember", link: "" },
-  { platform: "Velog", link: "" },
+  { platform: "Github", link: "https://github.com/seraleedev/resume-react" },
+  { platform: "Velog", link: "https://velog.io/@pingu944" },
 ];
