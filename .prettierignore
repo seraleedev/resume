@@ -1,0 +1,4 @@
+# Ignore minify files:
+*.min.css
+*.min.js
+*.md
