@@ -7,11 +7,12 @@ import { H3, Paragraph } from "@/components/common/typhography";
  * @param description
  * @returns
  */
-interface IServiceWithRole {
+export interface IServiceWithRole {
   serviceName: string;
   role: string;
   description?: string;
 }
+
 const ServiceWithRole = ({
   serviceName,
   role,

@@ -6,7 +6,7 @@ import { CareerItemWrap } from "./styles";
 import ProjectItem from "../../molcules/ProjectItems";
 
 /**
- * 경력 기술 리스트 컴포넌트
+ * 경력 기술 리스트 컴포넌트(PC)
  * @param showDivider
  * @param company
  * @param service
@@ -18,7 +18,7 @@ import ProjectItem from "../../molcules/ProjectItems";
  * @returns
  */
 
-interface ICareerList {
+export interface ICareerList {
   careerData: ICareerData;
   showDivider: boolean;
 }

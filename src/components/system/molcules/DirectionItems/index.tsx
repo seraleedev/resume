@@ -3,8 +3,8 @@ import { theme } from "@/styles/theme";
 
 /**
  * 지향점 키워드 설명 컴포넌트
- * @param projectLists
- * @param onlyTitle
+ * @param keyword
+ * @param description
  * @returns
  */
 

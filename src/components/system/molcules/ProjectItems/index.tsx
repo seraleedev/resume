@@ -1,7 +1,7 @@
 import { IProjectData } from "@/data/static";
 import { ProjectListWrap } from "./styles";
-import ProjectTitle from "../../atoms/CareerItem/ProjectTitle";
-import ProjectDetail from "../../atoms/CareerItem/ProjectDetail";
+import ProjectTitle from "../../atoms/CareerItem/projectTitle/ProjectTitle";
+import ProjectDetail from "../../atoms/CareerItem/projectDetail/ProjectDetail";
 
 /**
  * 사내 프로젝트 리스트 컴포넌트
@@ -10,7 +10,7 @@ import ProjectDetail from "../../atoms/CareerItem/ProjectDetail";
  * @returns
  */
 
-interface IProjectItems {
+export interface IProjectItems {
   projectLists: IProjectData[];
   onlyTitle?: boolean;
 }

@@ -1,14 +1,16 @@
 import { theme } from "@/styles/theme";
 import styled from "styled-components";
 
-
+interface IGreenContainer {
+  padding?: string;
+}
 
 export const ListWrap = styled.div`
-  margin: 28px 0 0;
+  margin: 30px 0 0;
 `;
 
-export const GreenFullContainer = styled.div`
+export const GreenContainer = styled.div<IGreenContainer>`
   width: 100%;
   background: ${theme.colors.green02};
-  padding: 60px 0 120px;
+  padding: ${({ padding }) => padding || 0};
 `;

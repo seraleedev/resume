@@ -16,6 +16,7 @@ interface IFlexBoxProps extends StyleProps<CSSProperties> {
   margin?: string;
   padding?: string;
   gap?: string;
+  bottom?: number;
 }
 
 // 공통 컴포넌트
@@ -23,12 +24,13 @@ interface IContainerProps {
   width?: string;
   height?: string;
   padding?: string;
+  margin?: string;
 }
 
 export const Container = styled.div<IContainerProps>`
   width: ${({ width }) => width || "1000px"};
   height: ${({ height }) => height || "auto"};
-  margin: 0 auto;
+  margin: ${({ margin }) => margin || "0 auto"};
   padding: ${({ padding }) => padding || 0};
 `;
 
@@ -47,6 +49,7 @@ export const FlexBox = styled.div<IFlexBoxProps>`
   ${({ gap }) => gap && `gap: ${gap};`}
   ${({ margin }) => margin && `margin: ${margin};`}
   ${({ padding }) => padding && `padding: ${padding};`}
+   ${({ bottom }) => bottom && `bottom: ${bottom}px;`}
 `;
 
 interface IButtonProps extends StyleProps<CSSProperties> {

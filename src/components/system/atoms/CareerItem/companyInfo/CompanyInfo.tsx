@@ -1,6 +1,6 @@
 import { H3, Paragraph } from "@/components/common/typhography";
 import { theme } from "@/styles/theme";
-import { CompanyInfoWrapper } from "./styles";
+import { CompanyInfoWrapper } from "../styles";
 
 /**
  * 회사명 및 경력 히스토리 컴포넌트
@@ -9,7 +9,7 @@ import { CompanyInfoWrapper } from "./styles";
  * @returns
  */
 
-interface ICompanyInfo {
+export interface ICompanyInfo {
   companyName: string;
   history: string;
 }
