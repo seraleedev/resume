@@ -28,7 +28,7 @@ const Header = ({ isScroll, isMobile }: IHeader) => {
   //인쇄 버튼 클릭
   const onClickPrint = () => {
     window.open(
-      "https://drive.google.com/file/d/1wgNC_udivaIEZZZ0taV3kCtAaT0oUk_l/view?usp=drive_link"
+      "https://drive.google.com/file/d/1iyH5zj-nsnm1Q3GXw6TPvw4YzB8GI2ui/view?usp=drive_link"
     );
   };
 
