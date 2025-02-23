@@ -2,27 +2,27 @@ import { H3, Paragraph } from "@/components/common/typhography";
 
 /**
  * 서비스명 및 담당작업 설명 컴포넌트
- * @param serviceName
+ * @param work
  * @param role
  * @param description
  * @returns
  */
 export interface IServiceWithRole {
-  serviceName: string;
+  work: string;
   role: string;
   description?: string;
 }
 
 const ServiceWithRole = ({
-  serviceName,
+  work,
   role,
   description,
 }: IServiceWithRole) => {
   return (
     <>
-      <H3 fontWeight={600}>{serviceName}</H3>
+      <H3 fontWeight={600}>{role}</H3>
       <Paragraph margin="10px 0 0" fontWeight={600}>
-        {role}
+        {work}
       </Paragraph>
       {description && (
         <Paragraph

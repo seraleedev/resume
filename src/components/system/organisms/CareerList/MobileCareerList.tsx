@@ -11,7 +11,7 @@ import MobileProjectItems from "../../molcules/ProjectItems/MobileProjectItems";
  * 경력 기술 리스트 컴포넌트(mobile)
  * @param showDivider
  * @param company
- * @param service
+ * @param work
  * @param history
  * @param role
  * @param description
@@ -23,7 +23,7 @@ import MobileProjectItems from "../../molcules/ProjectItems/MobileProjectItems";
 const MobileCareerList = ({ careerData, showDivider }: ICareerList) => {
   const {
     company,
-    service,
+    work,
     history,
     role,
     description,
@@ -36,7 +36,7 @@ const MobileCareerList = ({ careerData, showDivider }: ICareerList) => {
     <>
       <MobileCompanyInfo companyName={company} history={history} />
       <MobileServiceWithRole
-        serviceName={service}
+        work={work}
         role={role}
         description={description}
       />

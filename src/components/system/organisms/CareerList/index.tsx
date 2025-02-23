@@ -26,7 +26,7 @@ export interface ICareerList {
 const CareerList = ({ careerData, showDivider }: ICareerList) => {
   const {
     company,
-    service,
+    work,
     history,
     role,
     description,
@@ -41,11 +41,7 @@ const CareerList = ({ careerData, showDivider }: ICareerList) => {
         <CompanyInfo companyName={company} history={history} />
 
         <div>
-          <ServiceWithRole
-            serviceName={service}
-            role={role}
-            description={description}
-          />
+          <ServiceWithRole work={work} role={role} description={description} />
 
           <ProjectItem projectLists={projectList} onlyTitle={onlyTitle} />
 

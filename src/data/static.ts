@@ -7,7 +7,7 @@ export interface ICareerData {
   index: number;
   company: string;
   history: string;
-  service: string;
+  work: string;
   role: string;
   description?: string;
   techs: string[];
@@ -24,8 +24,8 @@ export const careerData: ICareerData[] = [
   {
     index: 0,
     company: "(주)같다",
-    history: "2022.08-2024.11",
-    service: "대형폐기물 서비스 빼기",
+    history: "2022.08-2024.11\n(2년 2개월)",
+    work: "UI 신규 개발 및 유지보수",
     role: "웹 프론트엔드",
     description: `대형폐기물 처리 플랫폼인 '빼기' 는 하이브리드 앱으로 만들어졌으며 B2C 서비스인 내려드림과\nG2C 서비스인 직접버림을 중심으로 운영 중입니다. 프로젝트에 사용된 디자인 시스템을 통해\n컴포넌트의 재사용성을 고려했습니다.`,
     techs: ["Next.js", "Typescript", "React", "Github", "AWS", "Antd"],
@@ -68,8 +68,8 @@ export const careerData: ICareerData[] = [
   {
     index: 1,
     company: "(주)플리지",
-    history: "2022.05-2022.06",
-    service: "출차요청 서비스 플리지",
+    history: "2022.05-2022.06\n(1개월)",
+    work: "UI 신규 개발",
     role: "인턴",
     description: `앱 내 채팅기능으로 간편히 출차를 요청하는 서비스 ‘플리지’의 홈페이지 화면 개발을 담당했습니다.`,
     techs: ["Next.js", "Typescript", "Antd"],
@@ -88,8 +88,8 @@ export const careerData: ICareerData[] = [
   {
     index: 2,
     company: "(주)바른손",
-    history: "2019.10-2021.12",
-    service: "내부 사업 프로젝트",
+    history: "2019.10-2021.12\n(2년 2개월)",
+    work: "UI/BI 디자인 및 웹사이트 화면 개발",
     role: "UI/BI 디자이너, 웹퍼블리셔",
     description: `바른손에서 진행하는 사업들의 웹페이지 디자인 및 제작을 담당했습니다.`,
     techs: ["HTML", "CSS", "Javascript"],
@@ -138,8 +138,8 @@ export const careerData: ICareerData[] = [
   {
     index: 3,
     company: "(주)이온소프트",
-    history: "2018.10-2019.10",
-    service: "외부 사업 프로젝트",
+    history: "2018.10-2019.10\n(1년)",
+    work: "UI 디자인 및 웹사이트 기획, 화면 개발",
     role: "웹퍼블리셔",
     techs: ["HTML", "CSS", "Jquery"],
     onlyTitle: true,
