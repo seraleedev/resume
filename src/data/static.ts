@@ -29,7 +29,15 @@ export const careerData: ICareerData[] = [
     role: "웹 프론트엔드",
     description: `'빼기'는 대형폐기물 처리 플랫폼으로 하이브리드 앱 형태로 개발되었으며 고객용 클라이언트 앱과 제휴 파트너용 파트너즈 앱으로 구분됩니다. 입사 후 빼기 서비스 리뉴얼 프로젝트에 참여하여 아토믹 디자인 시스템을 기반으로, 컴포넌트 재사용성을 고려한 개발을 수행했습니다. 
 리뉴얼 완료 후에는 서비스 고도화를 위해 다양한 신규 서비스 기능이 추가되었고, 기존 로직과의 원활한 통합을 위해 구성된 TF팀 내에서 다양한 직군 간 협업을 통해 개발을 담당했습니다.`,
-    techs: ["Next.js", "Typescript", "React", "Github", "AWS", "Antd"],
+    techs: [
+      "Next.js",
+      "Typescript",
+      "React",
+      "React-query",
+      "Github",
+      "AWS",
+      "Antd",
+    ],
     projectList: [
       {
         title: "빼기 홈페이지 개발",
@@ -73,7 +81,7 @@ export const careerData: ICareerData[] = [
     work: "UI 신규 개발",
     role: "인턴",
     description: `앱 내 채팅 기능으로 간편하게 출차를 요청하는 서비스 '플리지' 홈페이지 화면 개발을 담당했습니다.웹 퍼블리싱 경험을 바탕으로 UI 구현 및 공통 디자인 컴포넌트 구조 설계에 집중하였으며, 기존 팀원들이 작업 내역과 변경 히스토리를 쉽게 확인할 수 있도록 프로젝트 파일 문서화 작업을 추가로 수행했습니다.`,
-    techs: ["Next.js", "Typescript", "Antd"],
+    techs: ["Next.js", "Typescript", "recoil"],
     projectList: [
       {
         title: "플리지 홈페이지 개발",
@@ -93,7 +101,7 @@ export const careerData: ICareerData[] = [
     work: "UI/BI 디자인 및 웹사이트 화면 개발",
     role: "UI/BI 디자이너, 웹퍼블리셔",
     description: `바른손 내 자회사 및 사업들의 BI, UI/UX, 홍보영상, 웹사이트 제작을 담당했습니다.`,
-    techs: ["HTML", "CSS", "Javascript"],
+    techs: ["HTML", "CSS", "Javascript", "Jquery"],
     projectList: [
       {
         title: "nPlanet 사이트 구축",
@@ -142,7 +150,7 @@ export const careerData: ICareerData[] = [
     history: "2018.10-2019.10\n(1년)",
     work: "UI 디자인 및 웹사이트 기획, 화면 개발을 담당했습니다.",
     role: "웹퍼블리셔",
-    techs: ["HTML", "CSS", "Jquery"],
+    techs: ["HTML", "CSS", "Javascript", "Jquery"],
     onlyTitle: true,
     projectList: [
       {
