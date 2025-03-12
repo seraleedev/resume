@@ -81,7 +81,7 @@ export const careerData: ICareerData[] = [
     work: "UI 신규 개발",
     role: "인턴",
     description: `앱 내 채팅 기능으로 간편하게 출차를 요청하는 서비스 '플리지' 홈페이지 화면 개발을 담당했습니다.웹 퍼블리싱 경험을 바탕으로 UI 구현 및 공통 디자인 컴포넌트 구조 설계에 집중하였으며, 기존 팀원들이 작업 내역과 변경 히스토리를 쉽게 확인할 수 있도록 프로젝트 파일 문서화 작업을 추가로 수행했습니다.`,
-    techs: ["Next.js", "Typescript", "recoil"],
+    techs: ["Next.js", "Typescript", "recoil", "Github"],
     projectList: [
       {
         title: "플리지 홈페이지 개발",
