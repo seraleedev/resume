@@ -4,7 +4,7 @@ import { Button, FlexBox } from "@/components/common/component";
 import { Caption, H1, H4, MobileH1 } from "@/components/common/typhography";
 import { HeaderContainer, MobileHeaderContainer, WrapperH1 } from "./styles";
 import { BsDownload } from "react-icons/bs";
-import { headerData } from "@/data/static";
+import { headerData, resumeLink } from "@/data/static";
 import { IMainLayout } from "../../templates/MainLayout";
 
 /**
@@ -27,9 +27,7 @@ const Header = ({ isScroll, isMobile }: IHeader) => {
 
   //인쇄 버튼 클릭
   const onClickPrint = () => {
-    window.open(
-      "https://drive.google.com/file/d/1iyH5zj-nsnm1Q3GXw6TPvw4YzB8GI2ui/view?usp=drive_link"
-    );
+    window.open(resumeLink);
   };
 
   return isMobile ? (
@@ -64,8 +62,7 @@ const Header = ({ isScroll, isMobile }: IHeader) => {
     <HeaderContainer $isScroll={isScroll}>
       <Container width={"1000px"}>
         <FlexBox justify="flex-end" width="100%">
-          {/* 이력서 인쇄버튼 임시 주석처리 */}
-          {/* <Button
+          <Button
             background={theme.colors.green01}
             $borderRadius="100%"
             width="40px"
@@ -73,7 +70,7 @@ const Header = ({ isScroll, isMobile }: IHeader) => {
             onClick={onClickPrint}
           >
             <BsDownload size={"2rem"} />
-          </Button> */}
+          </Button>
         </FlexBox>
 
         {!isScroll && (

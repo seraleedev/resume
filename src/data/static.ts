@@ -97,7 +97,7 @@ export const careerData: ICareerData[] = [
   {
     index: 2,
     company: "(주)바른손",
-    history: "2019.10-2021.12\n(2년 2개월)",
+    history: "2019.10-2021.12\n(2년 3개월)",
     work: "UI/BI 디자인 및 웹사이트 화면 개발",
     role: "UI/BI 디자이너, 웹퍼블리셔",
     description: `바른손 내 자회사 및 사업들의 BI, UI/UX, 홍보영상, 웹사이트 제작을 담당했습니다.`,
@@ -193,3 +193,6 @@ export const contactData = [
   { platform: "Github", link: "https://github.com/seraleedev/resume" },
   { platform: "Velog", link: "https://velog.io/@pingu944" },
 ];
+
+export const resumeLink =
+  "https://drive.google.com/file/d/1AlsMe0Bdy3SXryPJRHvPVvCWJycobIAO/view?usp=sharing";
