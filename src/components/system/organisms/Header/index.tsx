@@ -62,7 +62,7 @@ const Header = ({ isScroll, isMobile }: IHeader) => {
     <HeaderContainer $isScroll={isScroll}>
       <Container width={"1000px"}>
         <FlexBox justify="flex-end" width="100%">
-          <Button
+          {/* <Button
             background={theme.colors.green01}
             $borderRadius="100%"
             width="40px"
@@ -70,7 +70,7 @@ const Header = ({ isScroll, isMobile }: IHeader) => {
             onClick={onClickPrint}
           >
             <BsDownload size={"2rem"} />
-          </Button>
+          </Button> */}
         </FlexBox>
 
         {!isScroll && (
