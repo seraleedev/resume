@@ -1,8 +1,10 @@
+//헤더
 export const headerData = {
   title: ["작은 부분부터 실천하는", "Frontend Developer", "이슬아입니다."],
   intro: `안녕하세요, 저는 웹 디자이너에서 시작한 주니어 프론트엔드 개발자입니다.\n"천릿길도 한 걸음부터" 라는 말처럼,\n좋은 코드는 하나씩 정리하는 습관부터 시작된다고 생각합니다.`,
 };
 
+//경력데이터 타입
 export interface ICareerData {
   index: number;
   company: string;
@@ -14,12 +16,13 @@ export interface ICareerData {
   projectList: IProjectData[];
   onlyTitle?: boolean;
 }
-
+//경력데이터 >프로젝트 타입
 export interface IProjectData {
   title: string;
   detail?: string[];
 }
 
+//경력 내용
 export const careerData: ICareerData[] = [
   {
     index: 0,
@@ -166,6 +169,7 @@ export const careerData: ICareerData[] = [
   },
 ];
 
+//목표 내용
 export const directionData = [
   {
     keyword: "Description",
@@ -189,10 +193,118 @@ export const directionData = [
   },
 ];
 
+//연락처 내용
 export const contactData = [
   { platform: "Github", link: "https://github.com/seraleedev/resume" },
   { platform: "Velog", link: "https://velog.io/@pingu944" },
 ];
 
+//이력서 pdf
 export const resumeLink =
   "https://drive.google.com/file/d/1AlsMe0Bdy3SXryPJRHvPVvCWJycobIAO/view?usp=sharing";
+
+//프로젝트 상세기술 데이터타입
+export interface projectDetailData {
+  id: number;
+  projectName: string;
+  rate: number;
+  goal: string;
+  range: string;
+  period: string;
+  member: string;
+  tech: string;
+  contribution: string[];
+}
+// 프로젝트 내용
+export const gatdaProject: projectDetailData[] = [
+  {
+    id: 1,
+    projectName: "빼기 클라이언트 : 재활용 계산기 서비스",
+    rate: 14,
+    goal: "신규 유저 유입률 증가 및 기존 유저의 앱 체류시간 증가",
+    range: "빼기 클라이언트 내 재활용 계산기 신규 서비스 화면 작업",
+    period: "2024.08~2024.09(4주)",
+    member: "백엔드 3인, 프론트엔드 2인, 디자이너 1인",
+    tech: "Typescript, Next.js,styled-component,React-query,Redux",
+    contribution: [
+      "재활용 계산기 거점 리스트 조회 및 필터링, 계산기 화면, 거점 상세페이지 및 후기 작성기능 구현",
+      "재활용 계산기 QA테스트",
+    ],
+  },
+  {
+    id: 2,
+    projectName: "빼기 클라이언트 : 직접버림&내려드림 연계 서비스",
+    rate: 35,
+    goal: "직접버림+내려드림 연계를 통한 작업건수 및 매출 증가",
+    range: "빼기 클라이언트 내 직접버림,내려드림 연계서비스 화면 작업",
+    period: "2022.10~2022.10(2주)",
+    member: "백엔드 1인, 프론트엔드 1인, 기획자 1인",
+    tech: "Typescript, Next.js,styled-component,React-query,Redux",
+    contribution: [
+      "직접버림&내려드림 연계 서비스 전용 신청 화면 및 상세페이지 구현",
+      "연계 서비스로 인한 관리자페이지 UX 플로우 수정",
+      "연계 서비스 데이터 QA 테스트",
+    ],
+  },
+  {
+    id: 3,
+    projectName: "빼기 관리자 페이지 리뉴얼",
+    rate: 20,
+    goal: "관리자 페이지 리뉴얼을 통한 브랜딩 강화, 사용자 UX 개선",
+    range: "빼기 관리자 페이지 리뉴얼 작업 (신규 화면 구현 및 API 교체)",
+    period: "2022.09~2022.09(4주)",
+    member: "백엔드 2인, 프론트엔드 2인, 기획자 1인",
+    tech: "Typescript,React,Ant design,React-query,Redux",
+    contribution: [
+      "고객정보,파트너 정보, 작업정보 조회 및 수정 페이지 기능구현",
+      "앱내 콘텐츠 조회, 신규작성, 수정 페이지 기능구현",
+      "관리자 페이지 공통 레이아웃 설정",
+    ],
+  },
+  {
+    id: 4,
+    projectName: "빼기 홈페이지 리뉴얼",
+    rate: 25,
+    goal: "홈페이지 리뉴얼을 통한 브랜딩 강화, 사용자 UX 개선",
+    range: "빼기 홈페이지 리뉴얼 작업 (신규 화면 구현 및 API 교체)",
+    period: "2022.08~2022.08(4주)",
+    member: "백엔드 1인, 프론트엔드 2인, 디자이너 1인",
+    tech: "Typescript, Next.js,styled-component,React-query,Redux",
+    contribution: [
+      "홈 화면, 서브 페이지 등 정적 페이지 화면구현",
+      "API 및 상태관리 라이브러리 교체 작업 (redux chunk > redux toolkit)",
+      "로그인,회원가입, 마이페이지 화면 및 기능구현",
+    ],
+  },
+];
+
+//자기소개 데이터 타입
+export interface aboutMeData {
+  title: string;
+  description: string;
+}
+
+export const aboutMe: aboutMeData[] = [
+  {
+    title: "정리하고 기록하는 개발자",
+    description: `저는 코드를 정리하는 것을 즐기며 가독성과 유지보수성을 높이는 것에 가치를 두는 사람입니다. 
+"천릿길도 한 걸음부터" 라는 말처럼, 좋은 코드는 하나씩 정리하는 습관부터 시작된다고 생각합니다. 
+이처럼 좋은 코드를 구현하기 위해 코드 작성 시 주석을 첨부하는 습관을 들이고, 코드 컨벤션 및 업데이트 히스토리를 기록하는 것을 중요하게 여깁니다. 
+작은 정보들을 문서화하는 것만으로도 빠른 서비스 파악과 원활한 협업에 도움을 줄수 있기에 프로덕트의 완성도를 올려준다고 생각하기 때문입니다.`,
+  },
+  {
+    title: "함께 고민하는 개발자",
+    description: `작은 프로젝트라도 완성도를 높이기 위해 기획과 디자인 단계에서 의견을 내는 것을 겁내지 않습니다. 
+프로덕트의 목적을 이해하고, 내가 쓰기 좋은 제품이 되어야 시장에서도 경쟁력 있는 제품을 만들 수 있기 때문입니다. 
+개발이 완료된 후에는 개발 테스트까지 직접 참여하여 기획 단계에서 생길 수 있는 변수에 대해 고민하고 이야기를 나누었습니다. 
+또한 웹디자이너로 근무한 경험을 살려 프론트엔드에서 컴포넌트의 크기와 간격을 지키는 등 디자인 QA를 미연에 방지하는 것을 중요하게 여깁니다.`,
+  },
+  {
+    title: "편의성을 추구하는 개발자",
+    description: `관리자 페이지를 리뉴얼하는 프로젝트에서는 시간상 디자이너가 투입되지 못한 프로젝트였습니다. 
+디자이너가 없는 상황이라도 사용자 편의성을 신경쓰는 것이 프론트엔드 단계에서 이루어져야 한다고 느껴 팀원들과 함께 
+UI 컴포넌트 라이브러리를 이용해 기획서에 명시되지 않았던 레이아웃들을 재구성하였습니다. 
+리뉴얼 이후에도 관리자 페이지를 운영하는 팀원들에게 피드백을 받아 매 스프린트 별로 개선된 UI를 제공하는 패치를 진행하기도 했습니다. 
+사용자의 귀찮음을 줄일 수 있다면, 저는 기꺼이 시간을 할애합니다.`,
+  },
+];
