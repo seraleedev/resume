@@ -5,16 +5,18 @@ import { Dot } from "./styles";
 interface ITitleWithDotProp {
   title: string;
   isMobile?: boolean;
+  margin?: string;
 }
 /**
  * 점 달린 타이틀 컴포넌트
  * @param title
  * @param isMobile
+ * @param margin
  * @returns
  */
-const TitleWithDot = ({ title, isMobile }: ITitleWithDotProp) => {
+const TitleWithDot = ({ title, isMobile, margin }: ITitleWithDotProp) => {
   return (
-    <TitleWrapper>
+    <TitleWrapper margin={margin}>
       <Dot />
       {isMobile ? (
         <MobileH1 margin="0 0 0 13px" fontWeight={700}>

@@ -3,6 +3,7 @@ import Footer from "../organisms/Footer";
 import { useRef, useState, useEffect } from "react";
 import CareerSection from "./CareerSection";
 import DirectionSection from "./DirectionSection";
+import Modal from "./Modal";
 
 export interface IMainLayout {
   isMobile: boolean;

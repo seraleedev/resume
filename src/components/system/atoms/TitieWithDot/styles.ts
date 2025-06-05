@@ -1,8 +1,12 @@
 import { theme } from "@/styles/theme";
 import styled from "styled-components";
 
-export const TitleWrapper = styled.div`
-  margin: 32px 0;
+interface ITitleWrapper {
+  margin?: string;
+}
+
+export const TitleWrapper = styled.div<ITitleWrapper>`
+  margin: ${({ margin }) => margin || "32px 0"};
 `;
 
 export const Dot = styled.div`
