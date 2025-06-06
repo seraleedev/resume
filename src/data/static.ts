@@ -207,10 +207,11 @@ export const resumeLink =
   "https://drive.google.com/file/d/1AlsMe0Bdy3SXryPJRHvPVvCWJycobIAO/view?usp=sharing";
 
 //프로젝트 상세기술 데이터타입
-export interface projectDetailData {
+export interface IProjectDetailData {
   id: number;
   projectName: string;
   rate: number;
+  contribution: string[];
   content: IProjectDetailContents;
 }
 export interface IProjectDetailContents {
@@ -219,7 +220,6 @@ export interface IProjectDetailContents {
   period: string;
   member: string;
   tech: string;
-  contribution: string[];
 }
 // 프로젝트 내용 타이틀
 export const gatdaProjectTitle = {
@@ -228,72 +228,72 @@ export const gatdaProjectTitle = {
     "모든 프로젝트의 개인 기여도는 작업 구성원을 기준으로 산출되었습니다.",
 };
 // 프로젝트 내용
-export const gatdaProject: projectDetailData[] = [
+export const gatdaProject: IProjectDetailData[] = [
   {
     id: 1,
     projectName: "빼기 클라이언트 : 재활용 계산기 서비스",
     rate: 14,
+    contribution: [
+      "재활용 계산기 거점 리스트 조회 및 필터링, 계산기 화면, 거점 상세페이지 및 후기 작성기능 구현",
+      "재활용 계산기 QA테스트",
+    ],
     content: {
       goal: "신규 유저 유입률 증가 및 기존 유저의 앱 체류시간 증가",
       range: "빼기 클라이언트 내 재활용 계산기 신규 서비스 화면 작업",
       period: "2024.08~2024.09(4주)",
       member: "백엔드 3인, 프론트엔드 2인, 디자이너 1인",
       tech: "Typescript, Next.js,styled-component,React-query,Redux",
-      contribution: [
-        "재활용 계산기 거점 리스트 조회 및 필터링, 계산기 화면, 거점 상세페이지 및 후기 작성기능 구현",
-        "재활용 계산기 QA테스트",
-      ],
     },
   },
   {
     id: 2,
     projectName: "빼기 클라이언트 : 직접버림&내려드림 연계 서비스",
     rate: 35,
+    contribution: [
+      "직접버림&내려드림 연계 서비스 전용 신청 화면 및 상세페이지 구현",
+      "연계 서비스로 인한 관리자페이지 UX 플로우 수정",
+      "연계 서비스 데이터 QA 테스트",
+    ],
     content: {
       goal: "직접버림+내려드림 연계를 통한 작업건수 및 매출 증가",
       range: "빼기 클라이언트 내 직접버림,내려드림 연계서비스 화면 작업",
       period: "2022.10~2022.10(2주)",
       member: "백엔드 1인, 프론트엔드 1인, 기획자 1인",
       tech: "Typescript, Next.js,styled-component,React-query,Redux",
-      contribution: [
-        "직접버림&내려드림 연계 서비스 전용 신청 화면 및 상세페이지 구현",
-        "연계 서비스로 인한 관리자페이지 UX 플로우 수정",
-        "연계 서비스 데이터 QA 테스트",
-      ],
     },
   },
   {
     id: 3,
     projectName: "빼기 관리자 페이지 리뉴얼",
     rate: 20,
+    contribution: [
+      "고객정보,파트너 정보, 작업정보 조회 및 수정 페이지 기능구현",
+      "앱내 콘텐츠 조회, 신규작성, 수정 페이지 기능구현",
+      "관리자 페이지 공통 레이아웃 설정",
+    ],
     content: {
       goal: "관리자 페이지 리뉴얼을 통한 브랜딩 강화, 사용자 UX 개선",
       range: "빼기 관리자 페이지 리뉴얼 작업 (신규 화면 구현 및 API 교체)",
       period: "2022.09~2022.09(4주)",
       member: "백엔드 2인, 프론트엔드 2인, 기획자 1인",
       tech: "Typescript,React,Ant design,React-query,Redux",
-      contribution: [
-        "고객정보,파트너 정보, 작업정보 조회 및 수정 페이지 기능구현",
-        "앱내 콘텐츠 조회, 신규작성, 수정 페이지 기능구현",
-        "관리자 페이지 공통 레이아웃 설정",
-      ],
     },
   },
   {
     id: 4,
     projectName: "빼기 홈페이지 리뉴얼",
     rate: 25,
+    contribution: [
+      "홈 화면, 서브 페이지 등 정적 페이지 화면구현",
+      "API 및 상태관리 라이브러리 교체 작업 (redux chunk > redux toolkit)",
+      "로그인,회원가입, 마이페이지 화면 및 기능구현",
+    ],
     content: {
       goal: "홈페이지 리뉴얼을 통한 브랜딩 강화, 사용자 UX 개선",
       range: "빼기 홈페이지 리뉴얼 작업 (신규 화면 구현 및 API 교체)",
       period: "2022.08~2022.08(4주)",
       member: "백엔드 1인, 프론트엔드 2인, 디자이너 1인",
       tech: "Typescript, Next.js,styled-component,React-query,Redux",
-      contribution: [
-        "홈 화면, 서브 페이지 등 정적 페이지 화면구현",
-        "API 및 상태관리 라이브러리 교체 작업 (redux chunk > redux toolkit)",
-        "로그인,회원가입, 마이페이지 화면 및 기능구현",
-      ],
     },
   },
 ];

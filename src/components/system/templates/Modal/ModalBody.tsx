@@ -6,6 +6,7 @@ import { theme } from "@/styles/theme";
 import TitleWithDot from "../../atoms/TitieWithDot";
 import { H3, H4, Paragraph } from "@/components/common/typhography";
 import ProjectDetailList from "../../organisms/ProjectDetailLists";
+import { gatdaProject } from "@/data/static";
 
 /**
  * 모달창 > 바디 컴포넌트
@@ -17,7 +18,9 @@ import ProjectDetailList from "../../organisms/ProjectDetailLists";
 const ModalBody = () => {
   return (
     <ModalBodyStyle>
-      <ProjectDetailList />
+      {gatdaProject.map((project) => (
+        <ProjectDetailList project={project} key={project.id} />
+      ))}
     </ModalBodyStyle>
   );
 };

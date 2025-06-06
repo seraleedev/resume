@@ -35,10 +35,10 @@ const MainLayout = ({ isMobile }: IMainLayout) => {
 
   return (
     <>
-      {/* <Modal
+      <Modal
         title={gatdaProjectTitle.title}
         subTitle={gatdaProjectTitle.subTitle}
-      /> */}
+      />
       <Header isScroll={isPoint} isMobile={isMobile} />
 
       <CareerSection isMobile={isMobile} isPoint={isPoint} />

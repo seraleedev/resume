@@ -23,6 +23,8 @@ export const ModalContainer = styled.div`
   background-color: #fff;
   width: 100%;
   max-height: 90vh;
+  overflow: scroll;
+  overflow-x: hidden;
   border-radius: 5px;
   position: relative;
 `;
@@ -32,6 +34,8 @@ export const ModalHeaderStyle = styled.div`
   padding: 20px 40px;
   border-radius: 5px 5px 0 0;
   width: 1000px;
+  position: sticky;
+  top: 0;
 `;
 
 export const ModalBodyStyle = styled.div`
