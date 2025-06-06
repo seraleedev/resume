@@ -20,7 +20,7 @@ export const ModalWrapper = styled.div`
 `;
 
 export const ModalContainer = styled.div`
-  background-color: white;
+  background-color: #fff;
   width: 100%;
   max-height: 90vh;
   border-radius: 5px;
@@ -28,18 +28,15 @@ export const ModalContainer = styled.div`
 `;
 
 export const ModalHeaderStyle = styled.div`
-  position: fixed;
   background-color: #fff;
-  padding: 20px 40px 0;
+  padding: 20px 40px;
   border-radius: 5px 5px 0 0;
   width: 1000px;
 `;
 
 export const ModalBodyStyle = styled.div`
   background-color: #fff;
-  position: absolute;
-  top: 119px;
   padding: 20px 40px;
   border-radius: 0 0 5px 5px;
-  width: 1000px;
+  width: 100%;
 `;

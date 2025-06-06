@@ -73,6 +73,10 @@ export const Button = styled.button<IButtonProps>`
   border: ${({ border }) => border || "none"};
   text-align: center;
   color: ${theme.colors.white};
+  &:hover {
+    background-color: ${theme.colors.gray02};
+  }
+  transition: all 0.3s;
 `;
 
 interface IDividerProps {

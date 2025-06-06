@@ -4,6 +4,7 @@ import { useRef, useState, useEffect } from "react";
 import CareerSection from "./CareerSection";
 import DirectionSection from "./DirectionSection";
 import Modal from "./Modal";
+import { gatdaProjectTitle } from "@/data/static";
 
 export interface IMainLayout {
   isMobile: boolean;
@@ -34,6 +35,10 @@ const MainLayout = ({ isMobile }: IMainLayout) => {
 
   return (
     <>
+      {/* <Modal
+        title={gatdaProjectTitle.title}
+        subTitle={gatdaProjectTitle.subTitle}
+      /> */}
       <Header isScroll={isPoint} isMobile={isMobile} />
 
       <CareerSection isMobile={isMobile} isPoint={isPoint} />

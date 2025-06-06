@@ -18,7 +18,7 @@ const ModalHeader = ({ title, subTitle }: IModalProps) => {
     <ModalHeaderStyle>
       <FlexBox justify="space-between" alignItems="center">
         <TitleWithDot title={title} margin="0" />
-        <Button width="50px" height="50px">
+        <Button width="50px" height="50px" $borderRadius="50px">
           <BsArrowLeft color={theme.colors.green01} size={"2rem"} />
         </Button>
       </FlexBox>

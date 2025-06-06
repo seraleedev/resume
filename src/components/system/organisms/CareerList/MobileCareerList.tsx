@@ -17,6 +17,7 @@ import MobileProjectItems from "../../molcules/ProjectItems/MobileProjectItems";
  * @param description
  * @param techs
  * @param projectList
+ * @param projectDetail
  * @returns
  */
 
@@ -30,6 +31,7 @@ const MobileCareerList = ({ careerData, showDivider }: ICareerList) => {
     techs,
     projectList,
     onlyTitle,
+    projectDetail,
   } = careerData;
 
   return (
@@ -39,6 +41,7 @@ const MobileCareerList = ({ careerData, showDivider }: ICareerList) => {
         work={work}
         role={role}
         description={description}
+        projectDetail={projectDetail}
       />
 
       <MobileProjectItems projectLists={projectList} onlyTitle={onlyTitle} />

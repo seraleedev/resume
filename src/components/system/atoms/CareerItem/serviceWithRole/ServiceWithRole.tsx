@@ -1,26 +1,44 @@
-import { H3, Paragraph } from "@/components/common/typhography";
+import { FlexBox } from "@/components/common/component";
+import { Anchor, H3, Paragraph } from "@/components/common/typhography";
+import { theme } from "@/styles/theme";
 
 /**
  * 서비스명 및 담당작업 설명 컴포넌트
  * @param work
  * @param role
  * @param description
+ * @param projectDetail
  * @returns
  */
 export interface IServiceWithRole {
   work: string;
   role: string;
   description?: string;
+  projectDetail?: string;
 }
 
 const ServiceWithRole = ({
   work,
   role,
   description,
+  projectDetail,
 }: IServiceWithRole) => {
   return (
     <>
-      <H3 fontWeight={600}>{role}</H3>
+      <FlexBox width="100%" justify="space-between">
+        <H3 fontWeight={600}>{role}</H3>
+        {projectDetail && (
+          <Anchor
+            href={projectDetail}
+            title="주요 프로젝트 상세"
+            target="_blank"
+          >
+            <Paragraph color={theme.colors.gray01}>
+              About project &gt;
+            </Paragraph>
+          </Anchor>
+        )}
+      </FlexBox>
       <Paragraph margin="10px 0 0" fontWeight={600}>
         {work}
       </Paragraph>

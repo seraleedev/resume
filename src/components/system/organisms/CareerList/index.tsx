@@ -15,6 +15,7 @@ import ProjectItem from "../../molcules/ProjectItems";
  * @param description
  * @param techs
  * @param projectList
+ * @param projectDetail
  * @returns
  */
 
@@ -33,6 +34,7 @@ const CareerList = ({ careerData, showDivider }: ICareerList) => {
     techs,
     projectList,
     onlyTitle,
+    projectDetail,
   } = careerData;
 
   return (
@@ -41,7 +43,12 @@ const CareerList = ({ careerData, showDivider }: ICareerList) => {
         <CompanyInfo companyName={company} history={history} />
 
         <div>
-          <ServiceWithRole work={work} role={role} description={description} />
+          <ServiceWithRole
+            work={work}
+            role={role}
+            description={description}
+            projectDetail={projectDetail}
+          />
 
           <ProjectItem projectLists={projectList} onlyTitle={onlyTitle} />
 
