@@ -1,7 +1,11 @@
 import styled from "styled-components";
 
+interface IModalProps {
+  show?: boolean;
+}
 // ModalOverlay > ModalWrapper > ModalContainer
-export const ModalOverlay = styled.div`
+export const ModalOverlay = styled.div<IModalProps>`
+  display: ${({ show }) => (show ? "block" : "none")};
   position: absolute;
   width: 100%;
   height: 100vh;
@@ -31,7 +35,7 @@ export const ModalContainer = styled.div`
 
 export const ModalHeaderStyle = styled.div`
   background-color: #fff;
-  padding: 20px 40px;
+  padding: 40px 40px 20px;
   border-radius: 5px 5px 0 0;
   width: 1000px;
   position: sticky;

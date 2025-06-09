@@ -20,6 +20,7 @@ const MainLayout = ({ isMobile }: IMainLayout) => {
 
   const START_POINT = 150;
   const [isPoint, setIsPoint] = useState<boolean>(false);
+  const [isShow, setIsShow] = useState(false);
 
   const setPoint = () => {
     const isReachPoint = window.scrollY >= START_POINT;
@@ -35,10 +36,14 @@ const MainLayout = ({ isMobile }: IMainLayout) => {
 
   return (
     <>
+      {/* 프로젝트 상세 모달 */}
       <Modal
         title={gatdaProjectTitle.title}
         subTitle={gatdaProjectTitle.subTitle}
+        show={isShow}
+        onClick={() => setIsShow(false)}
       />
+
       <Header isScroll={isPoint} isMobile={isMobile} />
 
       <CareerSection isMobile={isMobile} isPoint={isPoint} />

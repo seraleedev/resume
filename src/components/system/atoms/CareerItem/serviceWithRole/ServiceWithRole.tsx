@@ -1,6 +1,6 @@
 import { FlexBox } from "@/components/common/component";
-import { Anchor, H3, Paragraph } from "@/components/common/typhography";
-import { theme } from "@/styles/theme";
+import { H3, Paragraph } from "@/components/common/typhography";
+import ProjectDetailButton from "../ProjectDetailButton";
 
 /**
  * 서비스명 및 담당작업 설명 컴포넌트
@@ -8,6 +8,7 @@ import { theme } from "@/styles/theme";
  * @param role
  * @param description
  * @param projectDetail
+ * @param onClick
  * @returns
  */
 export interface IServiceWithRole {
@@ -15,6 +16,7 @@ export interface IServiceWithRole {
   role: string;
   description?: string;
   projectDetail?: string;
+  onClick?: () => void;
 }
 
 const ServiceWithRole = ({
@@ -22,22 +24,13 @@ const ServiceWithRole = ({
   role,
   description,
   projectDetail,
+  onClick,
 }: IServiceWithRole) => {
   return (
     <>
       <FlexBox width="100%" justify="space-between">
         <H3 fontWeight={600}>{role}</H3>
-        {projectDetail && (
-          <Anchor
-            href={projectDetail}
-            title="주요 프로젝트 상세"
-            target="_blank"
-          >
-            <Paragraph color={theme.colors.gray01}>
-              About project &gt;
-            </Paragraph>
-          </Anchor>
-        )}
+        {projectDetail && <ProjectDetailButton onClick={onClick} />}
       </FlexBox>
       <Paragraph margin="10px 0 0" fontWeight={600}>
         {work}
