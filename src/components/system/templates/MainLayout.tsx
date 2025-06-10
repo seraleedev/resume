@@ -5,6 +5,7 @@ import CareerSection from "./CareerSection";
 import DirectionSection from "./DirectionSection";
 import Modal from "./Modal";
 import { gatdaProjectTitle } from "@/data/static";
+import { useModal } from "@/context/ModalContext";
 
 export interface IMainLayout {
   isMobile: boolean;
@@ -17,10 +18,10 @@ export interface IMainLayout {
  */
 const MainLayout = ({ isMobile }: IMainLayout) => {
   const pointRef = useRef<HTMLDivElement>(null);
-
   const START_POINT = 150;
+
   const [isPoint, setIsPoint] = useState<boolean>(false);
-  const [isShow, setIsShow] = useState(false);
+  const { isOpen, closeModal } = useModal();
 
   const setPoint = () => {
     const isReachPoint = window.scrollY >= START_POINT;
@@ -40,8 +41,8 @@ const MainLayout = ({ isMobile }: IMainLayout) => {
       <Modal
         title={gatdaProjectTitle.title}
         subTitle={gatdaProjectTitle.subTitle}
-        show={isShow}
-        onClick={() => setIsShow(false)}
+        show={isOpen["projectDetail"]}
+        closeModal={() => closeModal("projectDetail")}
       />
 
       <Header isScroll={isPoint} isMobile={isMobile} />

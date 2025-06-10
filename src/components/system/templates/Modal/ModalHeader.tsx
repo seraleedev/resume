@@ -10,15 +10,21 @@ import { H4 } from "@/components/common/typhography";
  * 모달창 > 헤더 컴포넌트
  * @param title
  * @param subTitle
+ * @param closeModal
  * @returns
  */
 
-const ModalHeader = ({ title, subTitle }: IModalProps) => {
+const ModalHeader = ({ title, subTitle, closeModal }: IModalProps) => {
   return (
     <ModalHeaderStyle>
       <FlexBox justify="space-between" alignItems="center">
         <TitleWithDot title={title} margin="0" />
-        <Button width="50px" height="50px" $borderRadius="50px">
+        <Button
+          width="50px"
+          height="50px"
+          $borderRadius="50px"
+          onClick={closeModal}
+        >
           <BsArrowLeft color={theme.colors.green01} size={"2rem"} />
         </Button>
       </FlexBox>

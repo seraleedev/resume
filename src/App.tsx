@@ -4,6 +4,7 @@ import { ResetCss } from "@/styles/reset";
 import { GlobalStyle } from "@/styles/global";
 import { useMediaQuery } from "react-responsive";
 import MainLayout from "./components/system/templates/MainLayout";
+import { ModalProvider } from "./context/ModalContext";
 
 function App() {
   //mediaQuery
@@ -13,7 +14,9 @@ function App() {
     <ThemeProvider theme={theme}>
       <ResetCss />
       <GlobalStyle />
-      <MainLayout isMobile={isMobile} />
+      <ModalProvider>
+        <MainLayout isMobile={isMobile} />
+      </ModalProvider>
     </ThemeProvider>
   );
 }

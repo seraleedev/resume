@@ -1,6 +1,6 @@
 import { FlexBox } from "@/components/common/component";
 import { H3, Paragraph } from "@/components/common/typhography";
-import ProjectDetailButton from "../ProjectDetailButton";
+import DetailButton from "../DetailButton";
 
 /**
  * 서비스명 및 담당작업 설명 컴포넌트
@@ -30,7 +30,12 @@ const ServiceWithRole = ({
     <>
       <FlexBox width="100%" justify="space-between">
         <H3 fontWeight={600}>{role}</H3>
-        {projectDetail && <ProjectDetailButton onClick={onClick} />}
+        {projectDetail && (
+          <DetailButton
+            modalName={"projectDetail"}
+            buttonName="About project"
+          />
+        )}
       </FlexBox>
       <Paragraph margin="10px 0 0" fontWeight={600}>
         {work}
