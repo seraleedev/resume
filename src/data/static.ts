@@ -299,14 +299,14 @@ export const gatdaProject: IProjectDetailData[] = [
 ];
 
 //자기소개 데이터 타입
-export interface aboutMeData {
+export interface AboutMeData {
   title: string;
   description: string;
 }
 //자기소개 타이틀
 export const aboutMeTitle = { title: "어떤 사람인가요?" };
 // 자기소개 내용
-export const aboutMe: aboutMeData[] = [
+export const aboutMe: AboutMeData[] = [
   {
     title: "정리하고 기록하는 개발자",
     description: `저는 코드를 정리하는 것을 즐기며 가독성과 유지보수성을 높이는 것에 가치를 두는 사람입니다. 

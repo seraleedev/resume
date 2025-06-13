@@ -4,8 +4,15 @@ import { useRef, useState, useEffect } from "react";
 import CareerSection from "./CareerSection";
 import DirectionSection from "./DirectionSection";
 import Modal from "./Modal";
-import { gatdaProjectTitle } from "@/data/static";
+import ProjectDetailList from "../organisms/ProjectDetailLists";
+import {
+  aboutMeTitle,
+  gatdaProjectTitle,
+  gatdaProject,
+  aboutMe,
+} from "@/data/static";
 import { useModal } from "@/context/ModalContext";
+import AboutMeList from "../organisms/AboutMeList";
 
 export interface IMainLayout {
   isMobile: boolean;
@@ -34,7 +41,7 @@ const MainLayout = ({ isMobile }: IMainLayout) => {
       window.removeEventListener("scroll", setPoint);
     };
   }, [isPoint, pointRef]);
-
+  console.log(isOpen, "isOpen");
   return (
     <>
       {/* 프로젝트 상세 모달 */}
@@ -42,7 +49,20 @@ const MainLayout = ({ isMobile }: IMainLayout) => {
         title={gatdaProjectTitle.title}
         subTitle={gatdaProjectTitle.subTitle}
         show={isOpen["projectDetail"]}
+        data={gatdaProject.map((project) => (
+          <ProjectDetailList project={project} key={project.id} />
+        ))}
         closeModal={() => closeModal("projectDetail")}
+      />
+
+      {/* 자기소개 상세 모달 */}
+      <Modal
+        title={aboutMeTitle.title}
+        show={isOpen["aboutMe"]}
+        data={aboutMe.map((data, index) => (
+          <AboutMeList data={data} key={index} />
+        ))}
+        closeModal={() => closeModal("aboutMe")}
       />
 
       <Header isScroll={isPoint} isMobile={isMobile} />

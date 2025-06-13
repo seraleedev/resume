@@ -6,6 +6,7 @@ import { HeaderContainer, MobileHeaderContainer, WrapperH1 } from "./styles";
 import { BsDownload } from "react-icons/bs";
 import { headerData, resumeLink } from "@/data/static";
 import { IMainLayout } from "../../templates/MainLayout";
+import DetailButton from "../../atoms/CareerItem/DetailButton";
 
 /**
  * 상단 헤더 컴포넌트
@@ -86,7 +87,10 @@ const Header = ({ isScroll, isMobile }: IHeader) => {
                 </H1>
               ))}
             </WrapperH1>
-            <H4 $whiteSpace="pre-line">{headerData.intro}</H4>
+            <FlexBox justify="space-between" $alignItems="end">
+              <H4 $whiteSpace="pre-line">{headerData.intro}</H4>
+              <DetailButton modalName="aboutMe" buttonName="About me" />
+            </FlexBox>
           </>
         )}
       </Container>

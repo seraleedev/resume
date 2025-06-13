@@ -1,12 +1,17 @@
-import { ModalOverlay, ModalContainer, ModalWrapper } from "./styles";
+import {
+  ModalOverlay,
+  ModalContainer,
+  ModalWrapper,
+  ModalBodyStyle,
+} from "./styles";
 import ModalHeader from "./ModalHeader";
-import ModalBody from "./ModalBody";
 
 /**
  * 모달창 컴포넌트
  * @param show
  * @param title
  * @param subTitle
+ * @param data
  * @param closeModal
  * @returns
  */
@@ -15,10 +20,11 @@ export interface IModalProps {
   title: string;
   subTitle?: string;
   show?: boolean;
+  data?: JSX.Element[];
   closeModal?: () => void;
 }
 
-const Modal = ({ title, subTitle, closeModal, show }: IModalProps) => {
+const Modal = ({ title, subTitle, closeModal, show, data }: IModalProps) => {
   return (
     <ModalOverlay show={show}>
       <ModalWrapper>
@@ -28,7 +34,7 @@ const Modal = ({ title, subTitle, closeModal, show }: IModalProps) => {
             subTitle={subTitle}
             closeModal={closeModal}
           />
-          <ModalBody />
+          <ModalBodyStyle>{data}</ModalBodyStyle>
         </ModalContainer>
       </ModalWrapper>
     </ModalOverlay>

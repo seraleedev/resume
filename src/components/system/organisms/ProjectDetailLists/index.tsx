@@ -21,15 +21,19 @@ const ProjectDetailList = ({ project }: IProjectDetailList) => {
       <H3 fontWeight={600} margin="0 0 20px">
         {project.id}. {project.projectName} (기여도 {project.rate}%)
       </H3>
-      {Object.entries(project.content).map((item) => (
-        <MainProjectDetailItem contentTitle={item[0]} content={item[1]} />
+      {Object.entries(project.content).map((item, index) => (
+        <MainProjectDetailItem
+          contentTitle={item[0]}
+          content={item[1]}
+          key={index}
+        />
       ))}
       <FlexBox justify="flex-start" gap="5px">
         <ListDot />
         <Paragraph>기여한 부분 : </Paragraph>
       </FlexBox>
-      {project["contribution"].map((text) => (
-        <Paragraph color={theme.colors.gray01} padding="0 0 0 10px">
+      {project["contribution"].map((text, index) => (
+        <Paragraph color={theme.colors.gray01} padding="0 0 0 10px" key={index}>
           - {text}
         </Paragraph>
       ))}
