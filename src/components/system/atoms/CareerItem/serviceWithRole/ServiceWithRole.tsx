@@ -16,7 +16,6 @@ export interface IServiceWithRole {
   role: string;
   description?: string;
   projectDetail?: string;
-  onClick?: () => void;
 }
 
 const ServiceWithRole = ({
@@ -24,7 +23,6 @@ const ServiceWithRole = ({
   role,
   description,
   projectDetail,
-  onClick,
 }: IServiceWithRole) => {
   return (
     <>

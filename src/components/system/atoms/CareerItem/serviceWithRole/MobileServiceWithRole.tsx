@@ -1,8 +1,7 @@
 import { MobileParagraph } from "@/components/common/typhography";
 import { IServiceWithRole } from "./ServiceWithRole";
 import { FlexBox } from "@/components/common/component";
-import { Anchor, Paragraph } from "@/components/common/typhography";
-import { theme } from "@/styles/theme";
+import DetailButton from "../DetailButton";
 
 /**
  * 서비스명 및 담당작업 설명 컴포넌트(모바일)
@@ -28,12 +27,11 @@ const ServiceWithRole = ({
       {description && <MobileParagraph>{description}</MobileParagraph>}
 
       {projectDetail && (
-        <Anchor href={projectDetail} title="주요 프로젝트 상세" target="_blank">
-          <FlexBox width="100%" justify="space-between" margin="10px 0 20px">
-            <Paragraph color={theme.colors.gray01}>About project</Paragraph>
-            <Paragraph color={theme.colors.gray01}>&gt;</Paragraph>
-          </FlexBox>
-        </Anchor>
+        <DetailButton
+          modalName={"projectDetail"}
+          buttonName="About project"
+          isMobile
+        />
       )}
     </>
   );

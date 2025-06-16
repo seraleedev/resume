@@ -2,15 +2,20 @@ import styled from "styled-components";
 
 interface IModalProps {
   show?: boolean;
+  top?: number;
 }
 // ModalOverlay > ModalWrapper > ModalContainer
 export const ModalOverlay = styled.div<IModalProps>`
   display: ${({ show }) => (show ? "block" : "none")};
+  top: ${({ top }) => top}px;
   position: absolute;
   width: 100%;
   height: 100vh;
   background: rgba(0, 0, 0, 0.2);
   z-index: 100;
+  @media only screen and (max-width: 1023px) {
+    background: none;
+  }
 `;
 
 export const ModalWrapper = styled.div`
@@ -21,6 +26,9 @@ export const ModalWrapper = styled.div`
   justify-content: center;
   align-items: center;
   position: relative;
+  @media only screen and (max-width: 1023px) {
+    width: 100%;
+  }
 `;
 
 export const ModalContainer = styled.div`
@@ -31,6 +39,10 @@ export const ModalContainer = styled.div`
   overflow-x: hidden;
   border-radius: 5px;
   position: relative;
+  @media only screen and (max-width: 1023px) {
+    max-height: 100vh;
+    border-radius: 0;
+  }
 `;
 
 export const ModalHeaderStyle = styled.div`
@@ -40,6 +52,11 @@ export const ModalHeaderStyle = styled.div`
   width: 1000px;
   position: sticky;
   top: 0;
+  @media only screen and (max-width: 1023px) {
+    padding: 30px 20px 0;
+    width: 100%;
+    border-radius: 0;
+  }
 `;
 
 export const ModalBodyStyle = styled.div`
@@ -47,4 +64,8 @@ export const ModalBodyStyle = styled.div`
   padding: 20px 40px;
   border-radius: 0 0 5px 5px;
   width: 100%;
+  @media only screen and (max-width: 1023px) {
+    padding: 20px;
+    border-radius: 0;
+  }
 `;

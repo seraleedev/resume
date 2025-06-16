@@ -11,7 +11,7 @@ import { IDirectionItems } from ".";
 
 const MobileDirectionItems = ({ keyword, description }: IDirectionItems) => {
   return (
-    <div style={{ margin: "0 0 20px" }}>
+    <div style={{ margin: "0 0 10px" }}>
       <MobileH3 color={theme.colors.white} fontWeight={500}>
         {keyword}
       </MobileH3>

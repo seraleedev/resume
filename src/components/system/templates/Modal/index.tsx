@@ -13,6 +13,7 @@ import ModalHeader from "./ModalHeader";
  * @param subTitle
  * @param data
  * @param closeModal
+ * @param isMobile
  * @returns
  */
 
@@ -21,18 +22,27 @@ export interface IModalProps {
   subTitle?: string;
   show?: boolean;
   data?: JSX.Element[];
+  isMobile?: boolean;
   closeModal?: () => void;
 }
 
-const Modal = ({ title, subTitle, closeModal, show, data }: IModalProps) => {
+const Modal = ({
+  title,
+  subTitle,
+  closeModal,
+  show,
+  data,
+  isMobile,
+}: IModalProps) => {
   return (
-    <ModalOverlay show={show}>
+    <ModalOverlay show={show} top={window.scrollY}>
       <ModalWrapper>
         <ModalContainer>
           <ModalHeader
             title={title}
             subTitle={subTitle}
             closeModal={closeModal}
+            isMobile={isMobile}
           />
           <ModalBodyStyle>{data}</ModalBodyStyle>
         </ModalContainer>

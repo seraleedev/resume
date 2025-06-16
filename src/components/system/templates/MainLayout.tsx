@@ -13,6 +13,7 @@ import {
 } from "@/data/static";
 import { useModal } from "@/context/ModalContext";
 import AboutMeList from "../organisms/AboutMeList";
+import MobileProjectDetailList from "../organisms/ProjectDetailLists/mobile";
 
 export interface IMainLayout {
   isMobile: boolean;
@@ -41,22 +42,29 @@ const MainLayout = ({ isMobile }: IMainLayout) => {
       window.removeEventListener("scroll", setPoint);
     };
   }, [isPoint, pointRef]);
-  console.log(isOpen, "isOpen");
+
+
   return (
     <>
       {/* 프로젝트 상세 모달 */}
       <Modal
+        isMobile={isMobile}
         title={gatdaProjectTitle.title}
         subTitle={gatdaProjectTitle.subTitle}
         show={isOpen["projectDetail"]}
-        data={gatdaProject.map((project) => (
-          <ProjectDetailList project={project} key={project.id} />
-        ))}
+        data={gatdaProject.map((project) =>
+          isMobile ? (
+            <MobileProjectDetailList project={project} key={project.id} />
+          ) : (
+            <ProjectDetailList project={project} key={project.id} />
+          )
+        )}
         closeModal={() => closeModal("projectDetail")}
       />
 
       {/* 자기소개 상세 모달 */}
       <Modal
+        isMobile={isMobile}
         title={aboutMeTitle.title}
         show={isOpen["aboutMe"]}
         data={aboutMe.map((data, index) => (

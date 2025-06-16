@@ -23,17 +23,13 @@ export const ModalProvider = ({ children }: IModalProviderProps) => {
 
   const disableScroll = () => {
     document.body.style.cssText = `
-    position:fixed;
-    top: -${window.scrollY}px;
-    overflow-y:scroll;
+    overflow-y:hidden;
     width:100%;
   `;
   };
 
   const ableScroll = () => {
-    const scrollY = document.body.style.top;
     document.body.style.cssText = "";
-    window.scrollTo(0, parseInt(scrollY || "0", 10) * -1);
   };
 
   const openModal = (modalName: string) => {
