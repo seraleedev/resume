@@ -47,6 +47,9 @@ const Header = ({ isScroll, isMobile }: IHeader) => {
           <H4 $whiteSpace="pre-line" margin="35px 0 0">
             {headerData.intro}
           </H4>
+          <FlexBox margin="20px 0 0" justify="flex-end">
+            <DetailButton modalName="aboutMe" buttonName="MORE" />
+          </FlexBox>
         </div>
         <FlexBox position="absolute" bottom={30} width="100%">
           <Caption
@@ -89,7 +92,7 @@ const Header = ({ isScroll, isMobile }: IHeader) => {
             </WrapperH1>
             <FlexBox justify="space-between" $alignItems="end">
               <H4 $whiteSpace="pre-line">{headerData.intro}</H4>
-              <DetailButton modalName="aboutMe" buttonName="About me" />
+              <DetailButton modalName="aboutMe" buttonName="More" />
             </FlexBox>
           </>
         )}
