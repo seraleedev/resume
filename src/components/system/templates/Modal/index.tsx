@@ -35,7 +35,11 @@ const Modal = ({
   isMobile,
 }: IModalProps) => {
   return (
-    <ModalOverlay show={show} top={window.scrollY}>
+    <ModalOverlay
+      show={show}
+      top={window.scrollY}
+      onClick={isMobile ? undefined : closeModal}
+    >
       <ModalWrapper>
         <ModalContainer>
           <ModalHeader

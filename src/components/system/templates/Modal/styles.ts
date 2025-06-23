@@ -13,6 +13,7 @@ export const ModalOverlay = styled.div<IModalProps>`
   height: 100vh;
   background: rgba(0, 0, 0, 0.2);
   z-index: 100;
+  cursor: pointer;
   @media only screen and (max-width: 1023px) {
     background: none;
   }
