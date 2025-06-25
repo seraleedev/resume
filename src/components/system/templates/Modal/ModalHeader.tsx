@@ -23,7 +23,7 @@ const ModalHeader = ({
 }: IModalProps) => {
   return (
     <ModalHeaderStyle>
-      <FlexBox justify="space-between" alignItems="center">
+      <FlexBox justify="space-between" $alignItems="center">
         <TitleWithDot title={title} margin="0" isMobile={isMobile} />
         <Button
           width="50px"

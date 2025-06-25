@@ -1,12 +1,12 @@
 import styled from "styled-components";
 
 interface IModalProps {
-  show?: boolean;
+  $show?: boolean;
   top?: number;
 }
 // ModalOverlay > ModalWrapper > ModalContainer
 export const ModalOverlay = styled.div<IModalProps>`
-  display: ${({ show }) => (show ? "block" : "none")};
+  visibility: ${({ $show }) => ($show ? "visible" : "hidden")};
   top: ${({ top }) => top}px;
   position: absolute;
   width: 100%;
@@ -14,6 +14,25 @@ export const ModalOverlay = styled.div<IModalProps>`
   background: rgba(0, 0, 0, 0.2);
   z-index: 100;
   cursor: pointer;
+  animation: ${({ $show }) => ($show ? "fadeIn" : "fadeOut")} 0.3s ease-out;
+  transition: all 0.3s ease-out;
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+
   @media only screen and (max-width: 1023px) {
     background: none;
   }

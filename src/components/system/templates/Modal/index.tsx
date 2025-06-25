@@ -5,6 +5,7 @@ import {
   ModalBodyStyle,
 } from "./styles";
 import ModalHeader from "./ModalHeader";
+import { useEffect, useState } from "react";
 
 /**
  * 모달창 컴포넌트
@@ -34,9 +35,28 @@ const Modal = ({
   data,
   isMobile,
 }: IModalProps) => {
+  const [isAnimate, setIsAnimate] = useState(false);
+
+  useEffect(() => {
+    let timeoutId: NodeJS.Timeout;
+    if (show) {
+      setIsAnimate(true);
+    } else {
+      timeoutId = setTimeout(() => setIsAnimate(false), 300);
+    }
+
+    return () => {
+      if (timeoutId !== undefined) {
+        clearTimeout(timeoutId);
+      }
+    };
+  }, [show]);
+
+  if (!isAnimate) return null;
+
   return (
     <ModalOverlay
-      show={show}
+      $show={show}
       top={window.scrollY}
       onClick={isMobile ? undefined : closeModal}
     >
