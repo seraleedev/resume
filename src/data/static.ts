@@ -198,7 +198,7 @@ export const directionData = [
 
 //연락처 내용
 export const contactData = [
-  { platform: "Github", link: "https://github.com/seraleedev/resume" },
+  { platform: "Github", link: "https://github.com/seraleedev" },
   { platform: "Velog", link: "https://velog.io/@pingu944" },
 ];
 
