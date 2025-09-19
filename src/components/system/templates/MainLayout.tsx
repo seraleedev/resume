@@ -36,13 +36,12 @@ const MainLayout = ({ isMobile }: IMainLayout) => {
     if (isReachPoint !== isPoint) setIsPoint(isReachPoint);
   };
 
-  useEffect(() => {
-    window.addEventListener("scroll", setPoint);
-    return () => {
-      window.removeEventListener("scroll", setPoint);
-    };
-  }, [isPoint, pointRef]);
-
+  // useEffect(() => {
+  //   window.addEventListener("scroll", setPoint);
+  //   return () => {
+  //     window.removeEventListener("scroll", setPoint);
+  //   };
+  // }, [isPoint, pointRef]);
 
   return (
     <>
