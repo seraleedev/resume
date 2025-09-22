@@ -1,4 +1,4 @@
-import { H4, Paragraph } from "@/components/common/typhography";
+import { H4, Paragraph, H1, H2 } from "@/components/common/typhography";
 import { theme } from "@/styles/theme";
 
 /**
@@ -15,14 +15,28 @@ export interface IDirectionItems {
 
 const DirectionItems = ({ keyword, description }: IDirectionItems) => {
   return (
-    <div>
-      <H4 color={theme.colors.white} fontWeight={500}>
+    <div
+      style={{
+        scrollSnapAlign: `start`,
+        height: `100%`,
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "100%",
+        gap: 30,
+      }}
+    >
+      <H2
+        color={theme.colors.white}
+        fontWeight={500}
+        style={{ flexBasis: "30%" }}
+      >
         {keyword}
-      </H4>
+      </H2>
       <Paragraph
+        style={{ fontSize: "2.4rem", lineHeight: "3rem", flexBasis: "50%" }}
         margin="13px 0 0"
         color={theme.colors.white}
-        $whiteSpace="pre-line"
       >
         {description}
       </Paragraph>

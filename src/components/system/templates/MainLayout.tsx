@@ -78,7 +78,7 @@ const MainLayout = ({ isMobile }: IMainLayout) => {
 
       <DirectionSection isMobile={isMobile} />
 
-      <Footer isMobile={isMobile} />
+      {/* <Footer isMobile={isMobile} /> */}
     </>
   );
 };

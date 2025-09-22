@@ -23,7 +23,14 @@ const DirectionSection = ({ isMobile }: IMainLayout) => {
       <DirectionList directionData={directionData} isMobile />
     </GreenContainer>
   ) : (
-    <GreenContainer padding="60px 0 120px">
+    <GreenContainer
+      padding="60px 0 120px"
+      style={{
+        height: "100vh",
+        display: "sticky",
+        top: 0,
+      }}
+    >
       <Container>
         <H1 fontWeight={700} color={theme.colors.white} margin="0 0 60px">
           {sectionTitle}
