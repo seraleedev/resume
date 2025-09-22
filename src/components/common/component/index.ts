@@ -34,6 +34,13 @@ export const Container = styled.div<IContainerProps>`
   padding: ${({ padding }) => padding || 0};
 `;
 
+export const WhiteBox = styled.div<IContainerProps>`
+  width: ${({ width }) => width || "100%"};
+  background: white;
+  box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.08);
+  position: relative;
+`;
+
 export const FlexBox = styled.div<IFlexBoxProps>`
   display: flex;
   ${({ width }) => width && `width: ${width};`}

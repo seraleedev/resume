@@ -13,4 +13,5 @@ export const GreenContainer = styled.div<IGreenContainer>`
   width: 100%;
   background: ${theme.colors.green02};
   padding: ${({ padding }) => padding || 0};
+  position: relative;
 `;

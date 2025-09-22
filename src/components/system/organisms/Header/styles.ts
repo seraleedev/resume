@@ -6,12 +6,9 @@ interface IHeaderContainer {
 
 export const HeaderContainer = styled.div<IHeaderContainer>`
   width: 100%;
-  box-shadow: ${({ $isScroll }) =>
-    $isScroll ? "none" : `0px 10px 20px 0px rgba(0, 0, 0, 0.08)`};
-  padding: ${({ $isScroll }) => ($isScroll ? "10px 0" : "40px 0 60px")};
-  position: ${({ $isScroll }) => ($isScroll ? "fixed" : "relative")};
+  position: sticky;
+  padding: 40px 0 60px;
   top: 0;
-  transition: all 0.5s;
 `;
 
 export const WrapperH1 = styled.div`
@@ -19,7 +16,8 @@ export const WrapperH1 = styled.div`
 `;
 
 export const MobileHeaderContainer = styled.div<IHeaderContainer>`
-  position: relative;
+  position: sticky;
+  top: 0;
   width: 100%;
   height: 100vh;
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.08);
