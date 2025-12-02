@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const GlobalStyle = createGlobalStyle`
 @font-face {
-  font-family: "SUIT-Regular";
+  font-family: "SUIT";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2")
     format("woff2");
   font-weight: 400;
@@ -10,22 +10,22 @@ export const GlobalStyle = createGlobalStyle`
 }
 
 @font-face {
-  font-family: "SUIT-Medium";
+  font-family: "SUIT";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Medium.woff2")
     format("woff2");
   font-weight: 500;
   font-style: normal;
 }
 @font-face {
-  font-family: "SUIT-SemiBold";
+  font-family: "SUIT";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-SemiBold.woff2")
     format("woff2");
-  font-weight: 600l;
+  font-weight: 600;
   font-style: normal;
 }
 
 @font-face {
-  font-family: "SUIT-Bold";
+  font-family: "SUIT";
   src: url("https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Bold.woff2")
     format("woff2");
   font-weight: 700;
