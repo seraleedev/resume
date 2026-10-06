@@ -4,7 +4,7 @@ import {
   MobileServiceWithRole,
 } from "../../atoms/CareerItem";
 import Tag from "../../atoms/Tag";
-import { ICareerList } from ".";
+import { ICareerList, getCareerProjectDetailModal } from ".";
 import MobileProjectItems from "../../molecules/ProjectItems/MobileProjectItems";
 
 /**
@@ -17,7 +17,6 @@ import MobileProjectItems from "../../molecules/ProjectItems/MobileProjectItems"
  * @param description
  * @param techs
  * @param projectList
- * @param projectDetail
  * @returns
  */
 
@@ -31,7 +30,6 @@ const MobileCareerList = ({ careerData, showDivider }: ICareerList) => {
     techs,
     projectList,
     onlyTitle,
-    projectDetail,
   } = careerData;
 
   return (
@@ -41,7 +39,7 @@ const MobileCareerList = ({ careerData, showDivider }: ICareerList) => {
         work={work}
         role={role}
         description={description}
-        projectDetail={projectDetail}
+        projectDetailModal={getCareerProjectDetailModal(company)}
       />
 
       <MobileProjectItems projectLists={projectList} onlyTitle={onlyTitle} />

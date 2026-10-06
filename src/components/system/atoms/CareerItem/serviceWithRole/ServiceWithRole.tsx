@@ -7,7 +7,7 @@ import DetailButton from "../DetailButton";
  * @param work
  * @param role
  * @param description
- * @param projectDetail
+ * @param projectDetailModal
  * @param onClick
  * @returns
  */
@@ -15,22 +15,22 @@ export interface IServiceWithRole {
   work: string;
   role: string;
   description?: string;
-  projectDetail?: string;
+  projectDetailModal?: string;
 }
 
 const ServiceWithRole = ({
   work,
   role,
   description,
-  projectDetail,
+  projectDetailModal,
 }: IServiceWithRole) => {
   return (
     <>
       <FlexBox width="100%" justify="space-between">
         <H3 fontWeight={600}>{role}</H3>
-        {projectDetail && (
+        {projectDetailModal && (
           <DetailButton
-            modalName={"projectDetail"}
+            modalName={projectDetailModal}
             buttonName="About project"
           />
         )}

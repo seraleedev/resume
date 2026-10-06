@@ -8,7 +8,7 @@ import DetailButton from "../DetailButton";
  * @param work
  * @param role
  * @param description
- * @param projectDetail
+ * @param projectDetailModal
  * @returns
  */
 
@@ -16,7 +16,7 @@ const ServiceWithRole = ({
   work,
   role,
   description,
-  projectDetail,
+  projectDetailModal,
 }: IServiceWithRole) => {
   return (
     <>
@@ -26,9 +26,9 @@ const ServiceWithRole = ({
       </FlexBox>
       {description && <MobileParagraph>{description}</MobileParagraph>}
 
-      {projectDetail && (
+      {projectDetailModal && (
         <DetailButton
-          modalName={"projectDetail"}
+          modalName={projectDetailModal}
           buttonName="About project"
           isMobile
         />

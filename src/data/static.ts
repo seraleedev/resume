@@ -6,7 +6,6 @@ export const headerData = {
 
 //경력데이터 타입
 export interface ICareerData {
-  index: number;
   company: string;
   history: string;
   work: string;
@@ -26,22 +25,61 @@ export interface IProjectData {
 //경력 내용
 export const careerData: ICareerData[] = [
   {
-    index: 0,
+    company: "(주)온택트헬스",
+    history: "2025.10-현재",
+    work: "UI 신규 개발 및 유지보수",
+    role: "웹 프론트엔드",
+    description: `다수의 헬스케어 서비스 프론트엔드 개발을 담당했습니다.
+글로본 헬스케어 어드민은 디자인과 UI 가이드가 없는 환경에서 Ant Design 기반으로 화면 설계부터 API 연동까지 주도했고, 글로본 헬스케어 앱에서는 건강 앱(HealthKit·Health Connect) 연동, 스크래핑 인증, AI 리포트 PDF 등 외부 연동이 밀집된 기능을 개발했습니다.
+이후 진료지원시스템 서비스 신규 기능 개발과 유지보수를 담당하며, 복수의 신규 프로젝트 프론트엔드 개발 전반을 병행했습니다. 또한 슬랙 요청을 받아 운영 서버에서 바로 검수-재배포하던 방식의 개선을 위해 Jira 도입과 정기 릴리즈 프로세스를 제안했고, 버전 태그,자동 릴리즈 노트,프리빌드 검사 등 배포 기반을 구축하여 팀의 프로세스 정착에 기여했습니다.`,
+
+    techs: ["Vue.js", "Next.js", "React", "TypeScript"],
+    projectList: [
+      {
+        title: "글로본 헬스케어 어드민",
+        detail: [
+          "Antd 기반 UI 설계",
+          "주요 관리 페이지 개발",
+          "더미데이터 기반 선행 개발",
+        ],
+      },
+      {
+        title: "글로본 헬스케어 앱",
+        detail: [
+          "마이페이지 기능 전담",
+          "건강 앱 데이터 연동",
+          "병원기록, 건강검진 스크래핑 연동",
+          "라이프 로그·차트 구현",
+          "AI 리포트·PDF 페이지 개발",
+        ],
+      },
+      {
+        title: "'찾아가는 의료버스' 진료지원시스템",
+        detail: [
+          "체크리스트·통계 UI 개발",
+          "버전 태그·릴리즈 노트 및 프리빌드 체크 도입",
+          "Jira·정기 릴리즈 제안",
+          "비즈니스 로직 튜토리얼 개발",
+        ],
+      },
+      {
+        title: "사내 운영 시스템 FE 표준화",
+        detail: [
+          "공통 컴포넌트 설계",
+          "UI 라이브러리 전역 교체",
+          "에이전트용 UI 규칙 정의",
+        ],
+      },
+    ],
+  },
+  {
     company: "(주)같다",
     history: "2022.08-2024.11\n(2년 4개월)",
     work: "UI 신규 개발 및 유지보수",
     role: "웹 프론트엔드",
     description: `'빼기'는 대형폐기물 처리 플랫폼으로 하이브리드 앱 형태로 개발되었으며 고객용 클라이언트 앱과 제휴 파트너용 파트너즈 앱으로 구분됩니다. 입사 후 빼기 서비스 리뉴얼 프로젝트에 참여하여 아토믹 디자인 시스템을 기반으로, 컴포넌트 재사용성을 고려한 개발을 수행했습니다. 
 리뉴얼 완료 후에는 서비스 고도화를 위해 다양한 신규 서비스 기능이 추가되었고, 기존 로직과의 원활한 통합을 위해 구성된 TF팀 내에서 다양한 직군 간 협업을 통해 개발을 담당했습니다.`,
-    techs: [
-      "Next.js",
-      "Typescript",
-      "React",
-      "React-query",
-      "Github",
-      "AWS",
-      "Antd",
-    ],
+    techs: ["Next.js", "Typescript", "React", "React-query"],
     projectDetail:
       "https://www.notion.so/20a6e88b4c798067a08ec695fe5b45f2?source=copy_link",
     projectList: [
@@ -81,13 +119,12 @@ export const careerData: ICareerData[] = [
     ],
   },
   {
-    index: 1,
     company: "(주)플리지",
     history: "2022.05-2022.06\n(1개월)",
     work: "UI 신규 개발",
     role: "인턴",
     description: `앱 내 채팅 기능으로 간편하게 출차를 요청하는 서비스 '플리지' 홈페이지 화면 개발을 담당했습니다.웹 퍼블리싱 경험을 바탕으로 UI 구현 및 공통 디자인 컴포넌트 구조 설계에 집중하였으며, 기존 팀원들이 작업 내역과 변경 히스토리를 쉽게 확인할 수 있도록 프로젝트 파일 문서화 작업을 추가로 수행했습니다.`,
-    techs: ["Next.js", "Typescript", "recoil", "Github"],
+    techs: ["Next.js", "Typescript", "recoil"],
     projectList: [
       {
         title: "플리지 홈페이지 개발",
@@ -101,7 +138,6 @@ export const careerData: ICareerData[] = [
     ],
   },
   {
-    index: 2,
     company: "(주)바른손",
     history: "2019.10-2021.12\n(2년 3개월)",
     work: "UI/BI 디자인 및 웹사이트 화면 개발",
@@ -151,7 +187,6 @@ export const careerData: ICareerData[] = [
     ],
   },
   {
-    index: 3,
     company: "(주)이온소프트",
     history: "2018.10-2019.10\n(1년)",
     work: "UI 디자인 및 웹사이트 기획, 화면 개발을 담당했습니다.",
@@ -208,7 +243,6 @@ export const resumeLink =
 
 //프로젝트 상세기술 데이터타입
 export interface IProjectDetailData {
-  id: number;
   projectName: string;
   rate: number;
   contribution: string[];
@@ -221,80 +255,165 @@ export interface IProjectDetailContents {
   member: string;
   tech: string;
 }
-// 프로젝트 내용 타이틀
-export const gatdaProjectTitle = {
-  title: "주요 프로젝트",
-  subTitle:
-    "모든 프로젝트의 개인 기여도는 작업 구성원을 기준으로 산출되었습니다.",
-};
-// 프로젝트 내용
-export const gatdaProject: IProjectDetailData[] = [
+//회사별 프로젝트 상세 데이터타입
+export interface ICompanyProjectDetail {
+  company: string; // careerData의 company 값과 동일하게 작성(About project 버튼 매칭용)
+  title: string;
+  projects: IProjectDetailData[];
+}
+
+//회사별 프로젝트 상세 모달 이름
+export const getProjectDetailModalName = (company: string) =>
+  `projectDetail-${company}`;
+
+// 회사별 프로젝트 내용
+export const projectDetailData: ICompanyProjectDetail[] = [
   {
-    id: 1,
-    projectName: "빼기 클라이언트 : 재활용 계산기 서비스",
-    rate: 14,
-    contribution: [
-      "재활용 계산기 거점 리스트 조회 및 필터링, 계산기 화면, 거점 상세페이지 및 후기 작성기능 구현",
-      "재활용 계산기 QA테스트",
+    company: "(주)온택트헬스",
+    title: "주요 프로젝트",
+    projects: [
+      {
+        projectName: "글로본 헬스케어 어드민",
+        rate: 60, // FE 커밋 비중 약 60% 참고값
+        contribution: [
+          "디자인·UI 가이드가 없는 환경에서 Ant Design 기반 화면 설계 및 공통 레이아웃 구성",
+          "상품관리, 카드뉴스, 루틴 등 주요 관리 페이지 개발 및 전체 페이지 라우팅 연결",
+          "API 개발 전 더미데이터 기반 선행 개발 후 API 연동",
+          "ESLint·Prettier 설정 추가 및 루틴 API 호출 구조 리팩토링",
+        ],
+        content: {
+          goal: "헬스케어 서비스 콘텐츠·상품 운영을 위한 관리자 페이지 구축",
+          range: "글로본 헬스케어 어드민 신규 화면 설계 및 API 연동",
+          period: "2025.12~2026.03",
+          member: "프론트엔드 4인, 백엔드 3인, 디자이너 2인, 기획 1인",
+          tech: "React, Ant Design, Zustand, Tailwind CSS, Chart.js",
+        },
+      },
+      {
+        projectName: "글로본 헬스케어 앱",
+        rate: 27, // FE 커밋 비중 약 27%
+        contribution: [
+          "마이페이지 기능 전담 개발",
+          "HealthKit·Health Connect 건강 앱 데이터 네이티브 연동 (useAppConnect 훅)",
+          "진료·검진 기록 스크래핑 인증 연동",
+          "걸음수·몸무게·혈압 등 라이프 로그 화면 및 차트 컴포넌트 공통화",
+          "AI 리포트 및 지질 리포트 PDF 생성·다운로드 기능 개발",
+          "iOS 가상 키패드·Safari 날짜 파싱 등 모바일 환경 이슈 대응 및 QA 반영",
+        ],
+        content: {
+          goal: "건강 데이터 연동 기반의 개인 맞춤형 헬스케어 앱 서비스 제공",
+          range: "글로본 헬스케어 앱 마이페이지 및 외부 연동 기능 개발",
+          period: "2026.01~2026.04",
+          member: "프론트엔드 4인, 백엔드 3인, 디자이너 2인, 기획 1인",
+          tech: "React, Zustand, Tailwind CSS, Chart.js",
+        },
+      },
+      {
+        projectName: "'찾아가는 의료버스' 진료지원시스템",
+        rate: 80, // FE 커밋 비중 약 80%
+        contribution: [
+          "서비스 운영·버스 자가점검 체크리스트 및 통계 UI 개발",
+          "진료기록지, 진료 일정, 병원·사업자 계정 권한 등 신규 기능 개발 및 유지보수",
+          "비즈니스 로직 학습용 튜토리얼 기능 개발",
+          "Jira 도입 및 정기 릴리즈 프로세스 제안",
+          "버전 태그, GitHub 자동 릴리즈 노트, 프리빌드 검사 등 배포 기반 구축",
+        ],
+        content: {
+          goal: "의료버스 현장 진료 업무 지원 및 안정적인 정기 배포 체계 정착",
+          range:
+            "진료지원시스템 신규 기능 개발, 유지보수 및 배포 프로세스 개선",
+          period: "2025.10~현재",
+          member: "프론트엔드 1인, 백엔드 1인, 기획 1인, 디자이너 1인",
+          tech: "TypeScript, Next.js, React-query, Tailwind CSS, Chart.js",
+        },
+      },
+      {
+        projectName: "사내 운영 시스템 FE 표준화",
+        rate: 80,
+        contribution: [
+          "디자인 토큰 기반 공통 컴포넌트(Button, Input, Table, Card 등) 설계",
+          "공통 컴포넌트를 Element Plus 기반으로 전역 교체",
+          "아이콘 체계 정리(currentColor·크기 통일) 및 레이아웃 규칙 정비",
+          "AI 에이전트가 따를 UI 작성 규칙(CLAUDE.md, 컨벤션 문서) 정의",
+        ],
+        content: {
+          goal: "사내 운영 시스템 간 UI 일관성 확보 및 유지보수 비용 절감",
+          range: "NX 모노레포 기반 운영 어드민 공통 UI 및 화면 개편",
+          period: "2026.06~2026.08",
+          member: "프론트엔드 1인",
+          tech: "Vue 3, TypeScript, Element Plus, Pinia",
+        },
+      },
     ],
-    content: {
-      goal: "신규 유저 유입률 증가 및 기존 유저의 앱 체류시간 증가",
-      range: "빼기 클라이언트 내 재활용 계산기 신규 서비스 화면 작업",
-      period: "2024.08~2024.09(4주)",
-      member: "백엔드 3인, 프론트엔드 2인, 디자이너 1인",
-      tech: "Typescript, Next.js,styled-component,React-query,Redux",
-    },
   },
   {
-    id: 2,
-    projectName: "빼기 클라이언트 : 직접버림&내려드림 연계 서비스",
-    rate: 35,
-    contribution: [
-      "직접버림&내려드림 연계 서비스 전용 신청 화면 및 상세페이지 구현",
-      "연계 서비스로 인한 관리자페이지 UX 플로우 수정",
-      "연계 서비스 데이터 QA 테스트",
+    company: "(주)같다",
+    title: "주요 프로젝트",
+    projects: [
+      {
+        projectName: "빼기 클라이언트 : 재활용 계산기 서비스",
+        rate: 14,
+        contribution: [
+          "재활용 계산기 거점 리스트 조회 및 필터링, 계산기 화면, 거점 상세페이지 및 후기 작성기능 구현",
+          "재활용 계산기 QA테스트",
+        ],
+        content: {
+          goal: "신규 유저 유입률 증가 및 기존 유저의 앱 체류시간 증가",
+          range: "빼기 클라이언트 내 재활용 계산기 신규 서비스 화면 작업",
+          period: "2024.08~2024.09(4주)",
+          member: "백엔드 3인, 프론트엔드 2인, 디자이너 1인",
+          tech: "Typescript, Next.js,styled-component,React-query,Redux",
+        },
+      },
+      {
+        projectName: "빼기 클라이언트 : 직접버림&내려드림 연계 서비스",
+        rate: 35,
+        contribution: [
+          "직접버림&내려드림 연계 서비스 전용 신청 화면 및 상세페이지 구현",
+          "연계 서비스로 인한 관리자페이지 UX 플로우 수정",
+          "연계 서비스 데이터 QA 테스트",
+        ],
+        content: {
+          goal: "직접버림+내려드림 연계를 통한 작업건수 및 매출 증가",
+          range: "빼기 클라이언트 내 직접버림,내려드림 연계서비스 화면 작업",
+          period: "2022.10~2022.10(2주)",
+          member: "백엔드 1인, 프론트엔드 1인, 기획자 1인",
+          tech: "Typescript, Next.js,styled-component,React-query,Redux",
+        },
+      },
+      {
+        projectName: "빼기 관리자 페이지 리뉴얼",
+        rate: 20,
+        contribution: [
+          "고객정보,파트너 정보, 작업정보 조회 및 수정 페이지 기능구현",
+          "앱내 콘텐츠 조회, 신규작성, 수정 페이지 기능구현",
+          "관리자 페이지 공통 레이아웃 설정",
+        ],
+        content: {
+          goal: "관리자 페이지 리뉴얼을 통한 브랜딩 강화, 사용자 UX 개선",
+          range: "빼기 관리자 페이지 리뉴얼 작업 (신규 화면 구현 및 API 교체)",
+          period: "2022.09~2022.09(4주)",
+          member: "백엔드 2인, 프론트엔드 2인, 기획자 1인",
+          tech: "Typescript,React,Ant design,React-query,Redux",
+        },
+      },
+      {
+        projectName: "빼기 홈페이지 리뉴얼",
+        rate: 25,
+        contribution: [
+          "홈 화면, 서브 페이지 등 정적 페이지 화면구현",
+          "API 및 상태관리 라이브러리 교체 작업 (redux chunk > redux toolkit)",
+          "로그인,회원가입, 마이페이지 화면 및 기능구현",
+        ],
+        content: {
+          goal: "홈페이지 리뉴얼을 통한 브랜딩 강화, 사용자 UX 개선",
+          range: "빼기 홈페이지 리뉴얼 작업 (신규 화면 구현 및 API 교체)",
+          period: "2022.08~2022.08(4주)",
+          member: "백엔드 1인, 프론트엔드 2인, 디자이너 1인",
+          tech: "Typescript, Next.js,styled-component,React-query,Redux",
+        },
+      },
     ],
-    content: {
-      goal: "직접버림+내려드림 연계를 통한 작업건수 및 매출 증가",
-      range: "빼기 클라이언트 내 직접버림,내려드림 연계서비스 화면 작업",
-      period: "2022.10~2022.10(2주)",
-      member: "백엔드 1인, 프론트엔드 1인, 기획자 1인",
-      tech: "Typescript, Next.js,styled-component,React-query,Redux",
-    },
-  },
-  {
-    id: 3,
-    projectName: "빼기 관리자 페이지 리뉴얼",
-    rate: 20,
-    contribution: [
-      "고객정보,파트너 정보, 작업정보 조회 및 수정 페이지 기능구현",
-      "앱내 콘텐츠 조회, 신규작성, 수정 페이지 기능구현",
-      "관리자 페이지 공통 레이아웃 설정",
-    ],
-    content: {
-      goal: "관리자 페이지 리뉴얼을 통한 브랜딩 강화, 사용자 UX 개선",
-      range: "빼기 관리자 페이지 리뉴얼 작업 (신규 화면 구현 및 API 교체)",
-      period: "2022.09~2022.09(4주)",
-      member: "백엔드 2인, 프론트엔드 2인, 기획자 1인",
-      tech: "Typescript,React,Ant design,React-query,Redux",
-    },
-  },
-  {
-    id: 4,
-    projectName: "빼기 홈페이지 리뉴얼",
-    rate: 25,
-    contribution: [
-      "홈 화면, 서브 페이지 등 정적 페이지 화면구현",
-      "API 및 상태관리 라이브러리 교체 작업 (redux chunk > redux toolkit)",
-      "로그인,회원가입, 마이페이지 화면 및 기능구현",
-    ],
-    content: {
-      goal: "홈페이지 리뉴얼을 통한 브랜딩 강화, 사용자 UX 개선",
-      range: "빼기 홈페이지 리뉴얼 작업 (신규 화면 구현 및 API 교체)",
-      period: "2022.08~2022.08(4주)",
-      member: "백엔드 1인, 프론트엔드 2인, 디자이너 1인",
-      tech: "Typescript, Next.js,styled-component,React-query,Redux",
-    },
   },
 ];
 

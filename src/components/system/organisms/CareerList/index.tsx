@@ -1,6 +1,10 @@
 import { Divider, FlexBox } from "@/components/common/component";
 import { CompanyInfo, ServiceWithRole } from "../../atoms/CareerItem";
-import { ICareerData } from "@/data/static";
+import {
+  ICareerData,
+  getProjectDetailModalName,
+  projectDetailData,
+} from "@/data/static";
 import Tag from "../../atoms/Tag";
 import { CareerItemWrap } from "./styles";
 import ProjectItem from "../../molecules/ProjectItems";
@@ -15,7 +19,6 @@ import ProjectItem from "../../molecules/ProjectItems";
  * @param description
  * @param techs
  * @param projectList
- * @param projectDetail
  * @returns
  */
 
@@ -23,6 +26,12 @@ export interface ICareerList {
   careerData: ICareerData;
   showDivider: boolean;
 }
+
+//프로젝트 상세 데이터가 있는 회사만 모달 이름 반환
+export const getCareerProjectDetailModal = (company: string) =>
+  projectDetailData.some((detail) => detail.company === company)
+    ? getProjectDetailModalName(company)
+    : undefined;
 
 const CareerList = ({ careerData, showDivider }: ICareerList) => {
   const {
@@ -34,7 +43,6 @@ const CareerList = ({ careerData, showDivider }: ICareerList) => {
     techs,
     projectList,
     onlyTitle,
-    projectDetail,
   } = careerData;
 
   return (
@@ -47,7 +55,7 @@ const CareerList = ({ careerData, showDivider }: ICareerList) => {
             work={work}
             role={role}
             description={description}
-            projectDetail={projectDetail}
+            projectDetailModal={getCareerProjectDetailModal(company)}
           />
 
           <ProjectItem projectLists={projectList} onlyTitle={onlyTitle} />

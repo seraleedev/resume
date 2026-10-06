@@ -7,8 +7,8 @@ import Modal from "./Modal";
 import ProjectDetailList from "../organisms/ProjectDetailLists";
 import {
   aboutMeTitle,
-  gatdaProjectTitle,
-  gatdaProject,
+  projectDetailData,
+  getProjectDetailModalName,
   aboutMe,
 } from "@/data/static";
 import { useModal } from "@/context/ModalContext";
@@ -45,21 +45,34 @@ const MainLayout = ({ isMobile }: IMainLayout) => {
 
   return (
     <>
-      {/* 프로젝트 상세 모달 */}
-      <Modal
-        isMobile={isMobile}
-        title={gatdaProjectTitle.title}
-        subTitle={gatdaProjectTitle.subTitle}
-        show={isOpen["projectDetail"]}
-        data={gatdaProject.map((project) =>
-          isMobile ? (
-            <MobileProjectDetailList project={project} key={project.id} />
-          ) : (
-            <ProjectDetailList project={project} key={project.id} />
-          )
-        )}
-        closeModal={() => closeModal("projectDetail")}
-      />
+      {/* 회사별 프로젝트 상세 모달 */}
+      {projectDetailData.map(({ company, title, projects }) => {
+        const modalName = getProjectDetailModalName(company);
+        return (
+          <Modal
+            key={modalName}
+            isMobile={isMobile}
+            title={title}
+            show={isOpen[modalName]}
+            data={projects.map((project, index) =>
+              isMobile ? (
+                <MobileProjectDetailList
+                  project={project}
+                  order={index + 1}
+                  key={project.projectName}
+                />
+              ) : (
+                <ProjectDetailList
+                  project={project}
+                  order={index + 1}
+                  key={project.projectName}
+                />
+              ),
+            )}
+            closeModal={() => closeModal(modalName)}
+          />
+        );
+      })}
 
       {/* 자기소개 상세 모달 */}
       <Modal
