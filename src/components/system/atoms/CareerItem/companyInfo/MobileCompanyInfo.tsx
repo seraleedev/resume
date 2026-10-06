@@ -1,4 +1,4 @@
-import { MobileH3, MobileParagraph } from "@/components/common/typhography";
+import { MobileH3, MobileParagraph } from "@/components/common/typography";
 import { theme } from "@/styles/theme";
 import { FlexBox } from "@/components/common/component";
 import { ICompanyInfo } from "./CompanyInfo";

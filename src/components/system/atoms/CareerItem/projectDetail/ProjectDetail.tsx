@@ -1,5 +1,5 @@
 import { FlexBox } from "@/components/common/component";
-import { MobileParagraph, Paragraph } from "@/components/common/typhography";
+import { MobileParagraph, Paragraph } from "@/components/common/typography";
 import { theme } from "@/styles/theme";
 
 /**

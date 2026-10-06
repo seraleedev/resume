@@ -1,6 +1,6 @@
 import { FlexBox } from "@/components/common/component";
 import { ListDot } from "../styles";
-import { MobileParagraph, Paragraph } from "@/components/common/typhography";
+import { MobileParagraph, Paragraph } from "@/components/common/typography";
 
 /**
  * 상세 작업 타이틀 컴포넌트

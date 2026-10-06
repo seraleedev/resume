@@ -1,5 +1,5 @@
-import DirectionItems, { IDirectionItems } from "../../molcules/DirectionItems";
-import MobileDirectionItems from "../../molcules/DirectionItems/MobileDirectionItems";
+import DirectionItems, { IDirectionItems } from "../../molecules/DirectionItems";
+import MobileDirectionItems from "../../molecules/DirectionItems/MobileDirectionItems";
 import { DirectionListWrap } from "./styles";
 
 /**

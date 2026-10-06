@@ -1,6 +1,6 @@
 import { Container, WhiteBox } from "@/components/common/component";
 import { ListWrap } from "./styles";
-import TitleWithDot from "../atoms/TitieWithDot";
+import TitleWithDot from "../atoms/TitleWithDot";
 import { careerData } from "@/data/static";
 import CareerList from "../organisms/CareerList";
 import { IMainLayout } from "./MainLayout";

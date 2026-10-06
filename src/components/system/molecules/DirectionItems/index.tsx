@@ -1,4 +1,4 @@
-import { H4, Paragraph } from "@/components/common/typhography";
+import { H4, Paragraph } from "@/components/common/typography";
 import { theme } from "@/styles/theme";
 
 /**

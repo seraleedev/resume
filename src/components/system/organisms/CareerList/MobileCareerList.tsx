@@ -5,7 +5,7 @@ import {
 } from "../../atoms/CareerItem";
 import Tag from "../../atoms/Tag";
 import { ICareerList } from ".";
-import MobileProjectItems from "../../molcules/ProjectItems/MobileProjectItems";
+import MobileProjectItems from "../../molecules/ProjectItems/MobileProjectItems";
 
 /**
  * 경력 기술 리스트 컴포넌트(mobile)

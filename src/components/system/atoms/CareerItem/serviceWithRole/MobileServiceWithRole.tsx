@@ -1,4 +1,4 @@
-import { MobileParagraph } from "@/components/common/typhography";
+import { MobileParagraph } from "@/components/common/typography";
 import { IServiceWithRole } from "./ServiceWithRole";
 import { FlexBox } from "@/components/common/component";
 import DetailButton from "../DetailButton";

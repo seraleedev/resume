@@ -1,4 +1,4 @@
-import { H3, Paragraph } from "@/components/common/typhography";
+import { H3, Paragraph } from "@/components/common/typography";
 import { AboutMeData } from "@/data/static";
 
 /**

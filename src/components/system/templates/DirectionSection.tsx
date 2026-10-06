@@ -1,7 +1,7 @@
 import { directionData } from "@/data/static";
 import { Container } from "@/components/common/component";
 import { GreenContainer } from "./styles";
-import { H1, MobileH1 } from "@/components/common/typhography";
+import { H1, MobileH1 } from "@/components/common/typography";
 import { theme } from "@/styles/theme";
 import DirectionList from "../organisms/DirectionList";
 import { IMainLayout } from "./MainLayout";

@@ -1,5 +1,5 @@
 import { FlexBox } from "@/components/common/component";
-import { Paragraph } from "@/components/common/typhography";
+import { Paragraph } from "@/components/common/typography";
 import { useModal } from "@/context/ModalContext";
 import { theme } from "@/styles/theme";
 

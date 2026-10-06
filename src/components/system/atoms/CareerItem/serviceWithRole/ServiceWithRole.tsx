@@ -1,5 +1,5 @@
 import { FlexBox } from "@/components/common/component";
-import { H3, Paragraph } from "@/components/common/typhography";
+import { H3, Paragraph } from "@/components/common/typography";
 import DetailButton from "../DetailButton";
 
 /**

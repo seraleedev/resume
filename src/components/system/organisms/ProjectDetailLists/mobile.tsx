@@ -1,4 +1,4 @@
-import { MobileParagraph, Paragraph } from "@/components/common/typhography";
+import { MobileParagraph, Paragraph } from "@/components/common/typography";
 import { IProjectDetailData } from "@/data/static";
 import { ListDot } from "../../atoms/CareerItem/styles";
 import { FlexBox } from "@/components/common/component";

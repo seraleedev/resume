@@ -1,7 +1,7 @@
 import { theme } from "@/styles/theme";
 import { Container } from "@/components/common/component";
 import { Button, FlexBox } from "@/components/common/component";
-import { Caption, H1, H4, MobileH1 } from "@/components/common/typhography";
+import { Caption, H1, H4, MobileH1 } from "@/components/common/typography";
 import { HeaderContainer, MobileHeaderContainer, WrapperH1 } from "./styles";
 import { BsDownload } from "react-icons/bs";
 import { headerData, resumeLink } from "@/data/static";
