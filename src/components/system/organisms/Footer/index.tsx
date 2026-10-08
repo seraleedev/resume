@@ -1,5 +1,5 @@
 import { Container, FlexBox, WhiteBox } from "@/components/common/component";
-import { Anchor, Paragraph } from "@/components/common/typhography";
+import { Anchor, Paragraph } from "@/components/common/typography";
 import { contactData } from "@/data/static";
 import { IMainLayout } from "../../templates/MainLayout";
 

@@ -1,4 +1,4 @@
-import { H2, MobileH1 } from "@/components/common/typhography";
+import { H2, MobileH1 } from "@/components/common/typography";
 import { TitleWrapper } from "./styles";
 import { Dot } from "./styles";
 

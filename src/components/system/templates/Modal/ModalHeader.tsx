@@ -3,8 +3,8 @@ import { IModalProps } from ".";
 import { Button, FlexBox } from "@/components/common/component";
 import { BsArrowLeft } from "react-icons/bs";
 import { theme } from "@/styles/theme";
-import TitleWithDot from "../../atoms/TitieWithDot";
-import { H4, MobileParagraph } from "@/components/common/typhography";
+import TitleWithDot from "../../atoms/TitleWithDot";
+import { H4, MobileParagraph } from "@/components/common/typography";
 
 /**
  * 모달창 > 헤더 컴포넌트

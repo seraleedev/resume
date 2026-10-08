@@ -1,12 +1,11 @@
-import { theme } from "@/styles/theme";
-import { Container } from "@/components/common/component";
-import { Button, FlexBox } from "@/components/common/component";
-import { Caption, H1, H4, MobileH1 } from "@/components/common/typhography";
-import { HeaderContainer, MobileHeaderContainer, WrapperH1 } from "./styles";
-import { BsDownload } from "react-icons/bs";
-import { headerData, resumeLink } from "@/data/static";
-import { IMainLayout } from "../../templates/MainLayout";
-import DetailButton from "../../atoms/CareerItem/DetailButton";
+import { theme } from '@/styles/theme';
+import { Container } from '@/components/common/component';
+import { Button, FlexBox } from '@/components/common/component';
+import { Caption, H1, H4, MobileH1, Paragraph } from '@/components/common/typography';
+import { HeaderContainer, MobileHeaderContainer, WrapperH1 } from './styles';
+import { BsDownload } from 'react-icons/bs';
+import { aboutMeSectionId, headerData, resumeLink } from '@/data/static';
+import { IMainLayout } from '../../templates/MainLayout';
 
 /**
  * 상단 헤더 컴포넌트
@@ -23,8 +22,19 @@ const Header = ({ isScroll, isMobile }: IHeader) => {
   //스크롤 버튼 클릭
   const onClickScroll = () => {
     const pageHeight = window.innerHeight;
-    window.scrollTo({ top: pageHeight, behavior: "smooth" });
+    window.scrollTo({ top: pageHeight, behavior: 'smooth' });
   };
+
+  //MORE 버튼 클릭 > 자기소개 섹션으로 스크롤
+  const onClickMore = () => {
+    document.getElementById(aboutMeSectionId)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const moreButton = (
+    <Paragraph color={theme.colors.gray01} onClick={onClickMore} style={{ cursor: 'pointer' }}>
+      MORE &gt;
+    </Paragraph>
+  );
 
   //인쇄 버튼 클릭
   const onClickPrint = () => {
@@ -34,7 +44,7 @@ const Header = ({ isScroll, isMobile }: IHeader) => {
   return isMobile ? (
     <>
       <MobileHeaderContainer $isScroll={isScroll}>
-        <div style={{ padding: "0 20px" }}>
+        <div style={{ padding: '0 20px' }}>
           {headerData.title.map((title, index) => (
             <MobileH1
               key={`header-title-${index}`}
@@ -48,15 +58,11 @@ const Header = ({ isScroll, isMobile }: IHeader) => {
             {headerData.intro}
           </H4>
           <FlexBox margin="20px 0 0" justify="flex-end">
-            <DetailButton modalName="aboutMe" buttonName="MORE" />
+            {moreButton}
           </FlexBox>
         </div>
         <FlexBox position="absolute" bottom={30} width="100%">
-          <Caption
-            color={theme.colors.green01}
-            fontWeight={500}
-            onClick={onClickScroll}
-          >
+          <Caption color={theme.colors.green01} fontWeight={500} onClick={onClickScroll}>
             SCROLL DOWN
           </Caption>
         </FlexBox>
@@ -64,7 +70,7 @@ const Header = ({ isScroll, isMobile }: IHeader) => {
     </>
   ) : (
     <HeaderContainer $isScroll={isScroll}>
-      <Container width={"1000px"}>
+      <Container width={'1000px'}>
         <FlexBox justify="flex-end" width="100%">
           {/* <Button
             background={theme.colors.green01}
@@ -92,7 +98,7 @@ const Header = ({ isScroll, isMobile }: IHeader) => {
             </WrapperH1>
             <FlexBox justify="space-between" $alignItems="end">
               <H4 $whiteSpace="pre-line">{headerData.intro}</H4>
-              <DetailButton modalName="aboutMe" buttonName="More" />
+              {moreButton}
             </FlexBox>
           </>
         )}

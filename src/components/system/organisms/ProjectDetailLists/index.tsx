@@ -1,4 +1,4 @@
-import { H3, Paragraph } from "@/components/common/typhography";
+import { H3, Paragraph } from "@/components/common/typography";
 import { IProjectDetailData } from "@/data/static";
 import { ListDot } from "../../atoms/CareerItem/styles";
 import { FlexBox } from "@/components/common/component";
@@ -8,18 +8,20 @@ import MainProjectDetailItem from "../../atoms/MainProjectDetailItem";
 /**
  * 프로젝트 상세설명 컴포넌트(PC)
  * @param project
+ * @param order
  * @returns
  */
 
 interface IProjectDetailList {
   project: IProjectDetailData;
+  order: number;
 }
 
-const ProjectDetailList = ({ project }: IProjectDetailList) => {
+const ProjectDetailList = ({ project, order }: IProjectDetailList) => {
   return (
     <div style={{ margin: "0 0 30px" }}>
       <H3 fontWeight={600} margin="0 0 20px">
-        {project.id}. {project.projectName} (기여도 {project.rate}%)
+        {order}. {project.projectName} (기여도 {project.rate}%)
       </H3>
       {Object.entries(project.content).map((item, index) => (
         <MainProjectDetailItem

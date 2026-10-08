@@ -25,7 +25,7 @@ github page를 이용한 무료 호스팅, gh-pages를 이용하여 쉽고 빠�
  ┃ ┣ 📂common
  ┃ ┗ 📂system
  ┃ ┃ ┣ 📂atoms
- ┃ ┃ ┣ 📂molcules
+ ┃ ┃ ┣ 📂molecules
  ┃ ┃ ┣ 📂organisms
  ┃ ┃ ┗ 📂templates
  ┃ ┃ ┃ ┣ 📂Modal
