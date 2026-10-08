@@ -119,7 +119,7 @@ export const careerData: ICareerData[] = [
   {
     company: '(주)바른손',
     history: '2019.10-2021.12\n(2년 3개월)',
-    work: 'UI/BI 디자인 및 웹사이트 화면 개발',
+    work: 'UI/BI 디자인,웹사이트 화면 개발',
     role: 'UI/BI 디자이너, 웹퍼블리셔',
     description: `바른손 내 자회사 및 사업들의 BI, UI/UX, 홍보영상, 웹사이트 제작을 담당했습니다.`,
     techs: ['HTML', 'CSS', 'Javascript', 'Jquery'],
@@ -153,7 +153,7 @@ export const careerData: ICareerData[] = [
   {
     company: '(주)이온소프트',
     history: '2018.10-2019.10\n(1년)',
-    work: 'UI 디자인 및 웹사이트 기획, 화면 개발을 담당했습니다.',
+    work: 'UI 디자인, 웹사이트 기획, 화면 개발',
     role: '웹퍼블리셔',
     techs: ['HTML', 'CSS', 'Javascript', 'Jquery'],
     onlyTitle: true,
@@ -385,6 +385,8 @@ export interface AboutMeData {
 }
 //자기소개 타이틀
 export const aboutMeTitle = { title: '어떤 사람인가요?' };
+//자기소개 섹션 id(헤더 MORE 버튼 스크롤 대상)
+export const aboutMeSectionId = 'about-me';
 // 자기소개 내용
 export const aboutMe: AboutMeData[] = [
   {

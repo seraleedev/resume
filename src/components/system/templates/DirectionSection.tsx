@@ -1,7 +1,7 @@
 import { directionData } from "@/data/static";
 import { Container } from "@/components/common/component";
 import { GreenContainer } from "./styles";
-import { H1, MobileH1 } from "@/components/common/typography";
+import { H2, MobileH1 } from "@/components/common/typography";
 import { theme } from "@/styles/theme";
 import DirectionList from "../organisms/DirectionList";
 import { IMainLayout } from "./MainLayout";
@@ -25,9 +25,9 @@ const DirectionSection = ({ isMobile }: IMainLayout) => {
   ) : (
     <GreenContainer padding="60px 0 120px">
       <Container>
-        <H1 fontWeight={700} color={theme.colors.white} margin="0 0 60px">
+        <H2 fontWeight={700} color={theme.colors.white} margin="0 0 60px">
           {sectionTitle}
-        </H1>
+        </H2>
         <DirectionList directionData={directionData} />
       </Container>
     </GreenContainer>

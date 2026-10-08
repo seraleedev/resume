@@ -1,19 +1,14 @@
-import Header from "../organisms/Header";
-import Footer from "../organisms/Footer";
-import { useRef, useState, useEffect } from "react";
-import CareerSection from "./CareerSection";
-import DirectionSection from "./DirectionSection";
-import Modal from "./Modal";
-import ProjectDetailList from "../organisms/ProjectDetailLists";
-import {
-  aboutMeTitle,
-  projectDetailData,
-  getProjectDetailModalName,
-  aboutMe,
-} from "@/data/static";
-import { useModal } from "@/context/ModalContext";
-import AboutMeList from "../organisms/AboutMeList";
-import MobileProjectDetailList from "../organisms/ProjectDetailLists/mobile";
+import Header from '../organisms/Header';
+import Footer from '../organisms/Footer';
+import { useRef, useState, useEffect } from 'react';
+import CareerSection from './CareerSection';
+import DirectionSection from './DirectionSection';
+import AboutMeSection from './AboutMeSection';
+import Modal from './Modal';
+import ProjectDetailList from '../organisms/ProjectDetailLists';
+import { projectDetailData, getProjectDetailModalName } from '@/data/static';
+import { useModal } from '@/context/ModalContext';
+import MobileProjectDetailList from '../organisms/ProjectDetailLists/mobile';
 
 export interface IMainLayout {
   isMobile: boolean;
@@ -56,17 +51,9 @@ const MainLayout = ({ isMobile }: IMainLayout) => {
             show={isOpen[modalName]}
             data={projects.map((project, index) =>
               isMobile ? (
-                <MobileProjectDetailList
-                  project={project}
-                  order={index + 1}
-                  key={project.projectName}
-                />
+                <MobileProjectDetailList project={project} order={index + 1} key={project.projectName} />
               ) : (
-                <ProjectDetailList
-                  project={project}
-                  order={index + 1}
-                  key={project.projectName}
-                />
+                <ProjectDetailList project={project} order={index + 1} key={project.projectName} />
               ),
             )}
             closeModal={() => closeModal(modalName)}
@@ -74,22 +61,13 @@ const MainLayout = ({ isMobile }: IMainLayout) => {
         );
       })}
 
-      {/* 자기소개 상세 모달 */}
-      <Modal
-        isMobile={isMobile}
-        title={aboutMeTitle.title}
-        show={isOpen["aboutMe"]}
-        data={aboutMe.map((data, index) => (
-          <AboutMeList data={data} key={index} />
-        ))}
-        closeModal={() => closeModal("aboutMe")}
-      />
-
       <Header isScroll={isPoint} isMobile={isMobile} />
 
       <CareerSection isMobile={isMobile} isPoint={isPoint} />
 
       <DirectionSection isMobile={isMobile} />
+
+      <AboutMeSection isMobile={isMobile} />
 
       <Footer isMobile={isMobile} />
     </>
